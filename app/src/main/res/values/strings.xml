@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="zacznij">Aplikacja wspomagająca zapamiętywanie metod szybkiego liczenia w pamięci</string>
+    <string name="todo">TODO</string>
+    <string name="tutorial">WZTM</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="glowna">Główna</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="potegaa"><sup>2</sup></string>
+</resources>

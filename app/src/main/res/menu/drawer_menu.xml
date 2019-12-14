@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shownIn="navigation_view"
+
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_glowna"
+            android:icon="@drawable/ic_glowna"
+            android:title="@string/glowna"
+
+
+
+            />
+
+        <item
+            android:id="@+id/nav_trachtenberg"
+            android:icon="@drawable/ic_trachtenberg"
+            android:title="Trachtenberg"
+            />
+
+        <item
+            android:id="@+id/nav_wedyjska"
+            android:icon="@drawable/ic_wedyjska"
+            android:title="Wedyjska" />
+        <item
+            android:id="@+id/nav_cwiczenia"
+            android:icon="@drawable/ic_cwiczenia"
+            android:title="Cwiczenia" />
+        <item
+            android:id="@+id/nav_test"
+            android:icon="@drawable/ic_test"
+            android:title="TEST" />
+    </group>
+    <item android:title="Na początek">
+        <menu>
+            <item
+                android:id="@+id/nav_message"
+                android:icon="@drawable/ic_message"
+                android:title="Rozgrzewka" />
+
+        </menu>
+    </item>
+
+
+
+</menu>
