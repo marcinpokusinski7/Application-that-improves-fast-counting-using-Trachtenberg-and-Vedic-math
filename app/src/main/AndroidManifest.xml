@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestGlowny.TestFragment"></activity>
         <activity android:name=".TestGlowny.TestActivityTrachtenberg"></activity>
         <activity
             android:name=".MainActivity"

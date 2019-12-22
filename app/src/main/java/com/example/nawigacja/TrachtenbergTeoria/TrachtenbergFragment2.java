@@ -66,6 +66,12 @@ public class TrachtenbergFragment2 extends Fragment {
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
         kolumna3 = (EditText) v.findViewById(R.id.kolumna3);
         kolumna4 = (EditText) v.findViewById(R.id.kolumna4);
+        kolumna5 = (EditText) v.findViewById(R.id.kolumna5);
+        kolumna6 = (EditText) v.findViewById(R.id.kolumna6);
+        kolumna7 = (EditText) v.findViewById(R.id.kolumna7);
+        kolumna8 = (EditText) v.findViewById(R.id.kolumna8);
+        kolumna9 = (EditText) v.findViewById(R.id.kolumna9);
+        kolumna10 = (EditText) v.findViewById(R.id.kolumna10);
         refresh = (ImageView) v.findViewById(R.id.refresh);
         //losowaliczba.setText(generowanieString(6));
         textColorDefaultRb = wynik.getTextColors();
@@ -94,6 +100,18 @@ public class TrachtenbergFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 wynik.getText().clear();
+                kolumna1.getText().clear();
+                kolumna2.getText().clear();
+                kolumna3.getText().clear();
+                kolumna4.getText().clear();
+                kolumna5.getText().clear();
+                kolumna6.getText().clear();
+                kolumna7.getText().clear();
+                kolumna8.getText().clear();
+                kolumna9.getText().clear();
+                kolumna10.getText().clear();
+
+
                 Random rand = new Random();
                 number = rand.nextInt(10000);
                 String myString = String.valueOf(number);

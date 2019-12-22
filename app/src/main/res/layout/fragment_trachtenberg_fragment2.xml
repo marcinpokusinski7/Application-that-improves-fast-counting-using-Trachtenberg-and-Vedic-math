@@ -12,7 +12,7 @@
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -147,27 +147,28 @@
         android:textColorHint="#8a8a8a"
         android:textColor="#000000"
         android:padding="10dp"
-        android:inputType="text"
+        android:inputType="number|phone"
         android:background="#FFFFFF"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kolumna2"
-        android:textColor="#000000"
-        android:fontFamily="@font/robotomedium"
-        android:textColorHint="#8a8a8a"
-        android:padding="10dp"
-        android:inputType="text"
-        android:maxLength="4"
-        android:layout_marginTop="10dp"
-        android:hint="Wpisz liczbe"
-        android:background="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/kolumna2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/robotomedium"
+            android:hint="Wpisz liczbe"
+            android:inputType="number|phone"
+            android:maxLength="4"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#8a8a8a" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/kolumna3"
         android:padding="10dp"
-        android:inputType="text"
+        android:inputType="number|phone"
         android:textColor="#000000"
         android:fontFamily="@font/robotomedium"
         android:textColorHint="#8a8a8a"
@@ -180,10 +181,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/kolumna4"
         android:padding="10dp"
-        android:inputType="text"
         android:textColor="#000000"
         android:fontFamily="@font/robotomedium"
         android:textColorHint="#8a8a8a"
+        android:inputType="number|phone"
         android:maxLength="4"
         android:layout_marginTop="10dp"
         android:hint="Wpisz liczbe"
@@ -193,10 +194,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/kolumna5"
             android:padding="10dp"
-            android:inputType="text"
             android:textColor="#000000"
             android:fontFamily="@font/robotomedium"
             android:textColorHint="#8a8a8a"
+            android:inputType="number|phone"
             android:maxLength="4"
             android:layout_marginTop="10dp"
             android:hint="Wpisz liczbe"
@@ -266,14 +267,15 @@
             android:textColor="#000000"
             android:fontFamily="@font/robotomedium"
             android:textColorHint="#8a8a8a"
-            android:inputType="text"
+            android:inputType="number|phone"
+            android:maxLength="4"
             android:background="#FFFFFF"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kolumna7"
             android:padding="10dp"
-            android:inputType="text"
+            android:inputType="number|phone"
             android:maxLength="4"
             android:textColor="#000000"
             android:fontFamily="@font/robotomedium"
@@ -289,7 +291,7 @@
             android:fontFamily="@font/robotomedium"
             android:textColorHint="#8a8a8a"
             android:padding="10dp"
-            android:inputType="text"
+            android:inputType="number|phone"
             android:maxLength="4"
             android:layout_marginTop="10dp"
             android:hint="Wpisz liczbe"
@@ -302,7 +304,7 @@
             android:textColor="#000000"
             android:fontFamily="@font/robotomedium"
             android:textColorHint="#8a8a8a"
-            android:inputType="text"
+            android:inputType="number|phone"
             android:maxLength="4"
             android:layout_marginTop="10dp"
             android:hint="Wpisz liczbe"
@@ -312,11 +314,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/kolumna10"
             android:padding="10dp"
-            android:inputType="text"
+            android:inputType="number|phone"
+            android:maxLength="4"
             android:textColor="#000000"
             android:fontFamily="@font/robotomedium"
             android:textColorHint="#8a8a8a"
-            android:maxLength="4"
+
             android:layout_marginTop="10dp"
             android:hint="Wpisz liczbe"
             android:background="#FFFFFF"/>
@@ -337,7 +340,8 @@
         android:textColorHint="#8a8a8a"
         android:textColor="#000000"
         android:padding="10dp"
-        android:inputType="text"
+        android:inputType="number|phone"
+        android:maxLength="6"
         android:background="#FFFFFF"/>
         <Button
             android:id="@+id/sprawdz"
@@ -354,6 +358,7 @@
         android:layout_marginTop="30dp"
            android:layout_gravity="center"/>
         </LinearLayout>
+
     </ScrollView>
 
 
