@@ -63,6 +63,8 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+
         android:layout_centerVertical="true">
 
         <RadioButton
@@ -71,6 +73,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textSize="25dp"
+            android:textColor="#AAAAAA"
             android:text="Opcja 1" />
 
         <RadioButton
@@ -79,6 +83,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textSize="25dp"
             android:text="Opcja 2" />
 
         <RadioButton
@@ -87,6 +92,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textSize="25dp"
             android:text="Opcja 3" />
 
         <RadioButton
@@ -95,6 +101,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textSize="25dp"
             android:text="Opcja 4" />
     </RadioGroup>
 

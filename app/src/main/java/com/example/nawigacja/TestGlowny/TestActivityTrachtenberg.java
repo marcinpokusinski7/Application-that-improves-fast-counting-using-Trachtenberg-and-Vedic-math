@@ -3,6 +3,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.TypedArrayUtils;
@@ -29,7 +31,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
-
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+/*
 public class TestActivityTrachtenberg extends AppCompatActivity{
     int random2 = new Random().nextInt(10000);
     int random3 = new Random().nextInt(10000);
@@ -57,7 +61,8 @@ public class TestActivityTrachtenberg extends AppCompatActivity{
     Button submitbutton, quitbutton;
     RadioGroup radio_g;
     RadioButton rb1,rb2,rb3,rb4;
-   ;
+
+
 
     String questions[] = {
             "Podaj wynik: " +random2 + "*2" + " = ",
@@ -86,19 +91,21 @@ public class TestActivityTrachtenberg extends AppCompatActivity{
             random12*12, random12*2+1, random2*2-1, random2*2+3,
     };
 
+    long seed = System.nanoTime();
 
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_glowny_trachtenberg);
 
+
+
         final TextView score = (TextView)findViewById(R.id.text_view_score);
         startOdliczanie();
         Intent intent = getIntent();
-        String name= intent.getStringExtra("myname");
-
 
         submitbutton=(Button)findViewById(R.id.button_confirm_next);
         tvtimer = findViewById(R.id.text_view_countdown);
@@ -121,6 +128,7 @@ public class TestActivityTrachtenberg extends AppCompatActivity{
             public void onClick(View v) {
                 //int color = mBackgroundColor.getColor();
                 //mLayout.setBackgroundColor(color);
+
 
                 if(radio_g.getCheckedRadioButtonId()==-1)
                 {
@@ -222,10 +230,11 @@ public class TestActivityTrachtenberg extends AppCompatActivity{
         }
     }
 
+  
 
 
 }
 
 
-
+*/
 

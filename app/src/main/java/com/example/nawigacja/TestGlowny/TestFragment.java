@@ -32,7 +32,7 @@ public class TestFragment extends Fragment {
             public void onClick(View view) {
                 button_trach.setBackgroundResource(R.drawable.bg_item_cho);
                 //przycisk do cwiczen z podswietleniem na szaro, wyswietla fragment cwiczenia
-                Intent intent = new Intent(getContext(), TestActivityTrachtenberg.class);
+                Intent intent = new Intent(getContext(), Testact.class);
                 startActivity(intent);
             }
 

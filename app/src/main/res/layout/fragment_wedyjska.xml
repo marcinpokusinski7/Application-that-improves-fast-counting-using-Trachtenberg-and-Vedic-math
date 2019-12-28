@@ -67,30 +67,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotomedium"
-                    android:text="Matematyka Wedyjska"
+                    android:text="Matematyka Wedyjska - nazwa zbioru algorytmów, dzięki którym mamy możliwość rozwiązać pewne problemy rachunkowe. Reguły te zostały stworzone przez hinduiskiego duchownego Bhartiego Kriszna w XX wieku. "
                     android:textColor="#FFF"
                     android:textSize="18dp" />
+
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:background="@drawable/ic_plusjeden"
-                        android:layout_alignParentEnd="true"/>
-
 
 
                 </RelativeLayout>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/robotomedium"
-                android:text="Cwiczenia do wykonania"
-                android:textColor="#FFF"
-                android:textSize="24dp" />
 
         </LinearLayout>
 
@@ -170,9 +159,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:text="Numer 2"
-                    android:padding="2dp
-"
+                    android:text="Potęgowanie kwadratowe"
+                    android:padding="2dp"
                     android:textColor="#5e5e5e"
                     android:textSize="18dp" />
 
