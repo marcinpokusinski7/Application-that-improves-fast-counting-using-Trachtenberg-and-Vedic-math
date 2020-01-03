@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".TrachtenbergTeoria.TrachtenbergFragment2"
     android:background="@drawable/gradient"
-    android:padding="20dp"
-    android:orientation="vertical">
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:inputType="number|phone">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -17,6 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+
 
 
     <androidx.cardview.widget.CardView
@@ -30,6 +33,7 @@
             android:layout_height="164dp"
             android:background="@drawable/trach_view"
             android:orientation="vertical"
+            android:elevation="12dp"
             android:padding="16dp">
 
             <LinearLayout
@@ -71,6 +75,74 @@
 
 
     </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:elevation="12dp"
+                    style="@style/CardView.Light"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <ImageView
+                        android:padding="1dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_train" />
+
+                    <TextView
+
+                        android:id="@+id/desc"
+                        android:fontFamily="@font/robotomedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="53dp"
+                        android:textColor="#0a0a0a"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/teoria_do_wicze"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/arrowBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/ic_arrow_down"></Button>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/expandableView"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        style="@style/CardView.Light"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@android:dimen/app_icon_size"
+                        app:cardCornerRadius="@dimen/cardview_default_elevation"
+                        android:elevation="12dp"
+                        >
+<TextView
+    android:layout_width="match_parent"
+    android:textColor="#0a0a0a"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/robotomedium"
+    android:padding="10dp"
+    android:textSize="18sp"
+    android:text="siema siema siema siema\nsiema siema siema siema\nsiema siema siema siema"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </androidx.cardview.widget.CardView>
+
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"

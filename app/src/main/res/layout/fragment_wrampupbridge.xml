@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:padding="12dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Rozgrzewka"
+        android:fontFamily="@font/robotobold"
+        android:textColor="#FFF"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:textColor="#9a9a9a"
+        android:text="W tym miejscu możesz spróbować sił w rozgrzewce.\n1. Rozgrzewka rozpoczyna odliczanie od naciśnięcia przycisku Rozpocznij!\n2. Każda tura trwa 30 sekund, zabawa polega na dodawaniu liczb i wybieraniu odpowiednich kwadratów z wynikiem, aby zdobyć jak najwiecej punktów w czasie 30 sekund.\n3. Po zakończeniu czasu zobaczysz podsumowanie, oraz ilość poprawnych i niepoprawnych odpowiedzi, następnie po czeterech sekundach zaczyna się nowa tura, którą możesz rozpocząć naciskając start.\n4. Z każdym kolejnym równaniem poziom trudności zwiększa się. \nPowodzenia!"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:id="@+id/button_warmup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_item"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+
+        <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Rozpocznij!"
+                android:fontFamily="@font/robotobold"
+                android:textColor="#4a4a4a"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    
+

@@ -14,6 +14,7 @@
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="Test"
+        android:fontFamily="@font/robotobold"
         android:textColor="#8a8a8a"
         android:textSize="26sp" />
 
@@ -27,8 +28,9 @@
         android:textColor="#9a9a9a"
         android:textSize="16sp"
         android:textStyle="bold"/>
+
     <LinearLayout
-        android:id="@+id/button_trach"
+        android:id="@+id/trach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
@@ -41,12 +43,11 @@
         >
 
 
-
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_glowna"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_glowna" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,6 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotobold"
                 android:text="Trachtenberg"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp" />
@@ -63,7 +65,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test ogólny z wszystkich zagadnień"
+                android:fontFamily="@font/robotomedium"
+                android:text="Test z zagadanień Trachtenberga"
                 android:textColor="#bebebe"
                 android:textSize="14sp" />
 
@@ -71,6 +74,7 @@
                 android:id="@+id/highscore1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/robotomedium"
                 android:text="Highscore 0"
                 android:textColor="#4a4a4a"
                 android:textSize="14sp"
@@ -80,6 +84,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/button_wed"
         android:layout_width="match_parent"
@@ -111,13 +116,15 @@
                 android:layout_height="wrap_content"
                 android:text="Matematyka Wedyjska"
                 android:textColor="#4a4a4a"
+                android:fontFamily="@font/robotobold"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test losowy z wszystkich zagadnień"
+                android:text="Test losowy z matematyki wedyjskiej."
                 android:textColor="#bebebe"
+                android:fontFamily="@font/robotomedium"
                 android:textSize="14sp" />
 
             <TextView
@@ -125,8 +132,108 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Highscore 0"
+                android:fontFamily="@font/robotomedium"
                 android:textColor="#4a4a4a"
                 android:textSize="14sp"
+
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_compare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_item"
+        android:orientation="horizontal"
+        android:padding="12dp"
+
+        >
+
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_glowna"
+            android:layout_marginRight="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test wspólny"
+                android:fontFamily="@font/robotobold"
+                android:textColor="#4a4a4a"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test losowy z matematyki wedyjskiej i Trachtenberga."
+                android:textColor="#bebebe"
+                android:fontFamily="@font/robotomedium"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/highscore7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Highscore 0"
+                android:fontFamily="@font/robotomedium"
+                android:textColor="#4a4a4a"
+                android:textSize="14sp"
+
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button_bestscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+
+        android:background="@drawable/bg_item"
+        android:orientation="horizontal"
+        android:padding="12dp"
+
+        >
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Najlepsze wyniki"
+
+                android:fontFamily="@font/robotobold"
+                android:textColor="#4a4a4a"
+                android:textSize="18sp" />
+
+
+
+
 
 
                 />

@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nawigacja.R;
 
-public class Rozgrzewkaglowna extends Fragment {
+public class WarmUpMain extends Fragment {
     Test t = new Test();
 
 
@@ -41,13 +41,15 @@ public class Rozgrzewkaglowna extends Fragment {
     CountDownTimer timer = new CountDownTimer(30000, 1000) {
         @Override
         public void onTick(long l) {
-            secondRemaining--;
+            secondRemaining=secondRemaining-1;
             textViewTime.setText(Integer.toString(secondRemaining)+" sekund");
             prog_timer.setProgress(30-secondRemaining);
+
         }
 
         @Override
         public void onFinish() {
+
             rb1.setEnabled(false);
             rb2.setEnabled(false);
             rb3.setEnabled(false);

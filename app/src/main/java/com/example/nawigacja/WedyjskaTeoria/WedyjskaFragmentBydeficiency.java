@@ -1,4 +1,4 @@
-package com.example.nawigacja.TrachtenbergTeoria;
+package com.example.nawigacja.WedyjskaTeoria;
 
 
 import android.content.res.ColorStateList;
@@ -19,14 +19,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nawigacja.R;
-import com.example.nawigacja.TrachtenbergFragment;
+import com.example.nawigacja.WedyjskaFragment;
 
 import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TrachtenbergFragment11 extends Fragment {
+public class WedyjskaFragmentBydeficiency extends Fragment {
     private Button back;
     private EditText kolumna1;
     private EditText kolumna2;
@@ -39,19 +39,20 @@ public class TrachtenbergFragment11 extends Fragment {
     private EditText kolumna9;
     private EditText kolumna10;
     private TextView losowaliczba;
-    private ColorStateList textColorDefaultRb;
-
     private EditText wynik;
-    private Button sprawdz;
-    int number = new Random().nextInt(10000);
+    private Button sprawdz, hund, tho;
     private ImageView refresh;
+    private TextView potega;
+
+    int number, numbertwo;
     CardView expandableView;
     Button arrowBtn;
     CardView cardView;
 
+    private ColorStateList textColorDefaultRb;
 
 
-    public TrachtenbergFragment11() {
+    public WedyjskaFragmentBydeficiency() {
         // Required empty public constructor
     }
 
@@ -59,11 +60,14 @@ public class TrachtenbergFragment11 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_trachtenberg_fragment11, container, false);
+        View v = inflater.inflate(R.layout.fragment_wedyjska_bydeficiency, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
         sprawdz = (Button) v.findViewById(R.id.sprawdz);
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
         back = (Button) v.findViewById(R.id.back);
+        potega = (TextView) v.findViewById(R.id.potega);
+        hund = (Button) v.findViewById(R.id.hund);
+        tho = (Button) v.findViewById(R.id.tho);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
         kolumna3 = (EditText) v.findViewById(R.id.kolumna3);
@@ -80,7 +84,7 @@ public class TrachtenbergFragment11 extends Fragment {
         expandableView = (CardView) v.findViewById(R.id.expandableView);
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
-
+        textColorDefaultRb = wynik.getTextColors();
         arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,19 +102,36 @@ public class TrachtenbergFragment11 extends Fragment {
 
         });
 
-        sprawdz.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+        Random rand = new Random();
+        number = rand.nextInt(99-80)+80;
+
+
+        String myString = String.valueOf(number);
+        losowaliczba.setText(myString);
+        sprawdz.setOnClickListener(new View.OnClickListener() {                // potegowanie liczb z koncowka 5
             @Override
             public void onClick(View view) {
-                if(wynik.getText().toString().equals( wynik.getText().toString())){
-                    wynik.setText(Integer.toString(number*11));
-                    wynik.setTextColor(Color.GREEN);
-                }
+                wynik.setText(Integer.toString(number*number));
+                wynik.setTextColor(Color.GREEN);
             }
         });
 
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                wynik.getText().clear();
+                Random rand = new Random();
+                number = rand.nextInt(99-80)+80 ;
+                if (number == 0){
+                    number++;
+
+
+                }
                 kolumna1.getText().clear();
                 kolumna2.getText().clear();
                 kolumna3.getText().clear();
@@ -123,21 +144,27 @@ public class TrachtenbergFragment11 extends Fragment {
                 kolumna10.getText().clear();
                 wynik.getText().clear();
                 wynik.setTextColor(textColorDefaultRb);
-                Random rand = new Random();
-                number = rand.nextInt(10000);
                 String myString = String.valueOf(number);
                 losowaliczba.setText(myString);
             }
         });
 
 
+
+
+
+
+
+        potega.setText("\u00B2");
+
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TrachtenbergFragment trachtenbergFragment = new TrachtenbergFragment();
+                WedyjskaFragment wedyjskaFragment = new WedyjskaFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
-                transaction.replace(R.id.fragment_container, trachtenbergFragment);
+                transaction.replace(R.id.fragment_container, wedyjskaFragment);
 
                 transaction.commit();
 
@@ -145,8 +172,9 @@ public class TrachtenbergFragment11 extends Fragment {
         });
 
 
+
+
         return v;
 
-    }
+    }}
 
-}

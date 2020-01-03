@@ -135,6 +135,7 @@
 
 
             </androidx.cardview.widget.CardView>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,14 +168,23 @@
                         android:textSize="24dp" />
 
                     <TextView
+                        android:id="@+id/delay"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="14dp"
 
-                        android:layout_marginBottom="1dp"
                         android:fontFamily="@font/robotobold"
+                        android:text="*"
+                        android:textColor="#FFF"
+                        android:textSize="24dp" />
+                    <TextView
+                        android:id="@+id/potega"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
 
-                        android:text="*8"
+                        android:fontFamily="@font/robotobold"
+                        android:text=""
                         android:textColor="#FFF"
                         android:textSize="24dp" />
 
@@ -191,7 +201,6 @@
 
 
             </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -276,7 +285,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="*8"
+                android:text="*2"
                 android:textColor="#FFF"
 
                 android:textSize="32dp" />
@@ -285,14 +294,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="*8"
+                android:text="*2"
                 android:textColor="#FFF"
                 android:textSize="32dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="*8"
+                android:text="*2"
                 android:textColor="#FFF"
                 android:layout_marginTop="12dp"
                 android:textSize="32dp" />
@@ -301,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
                 android:layout_marginTop="12dp"
-                android:text="*8"
+                android:text="*2"
                 android:textColor="#FFF"
                 android:textSize="32dp" />
             <TextView
@@ -309,7 +318,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
                 android:layout_marginTop="12dp"
-                android:text="*8"
+                android:text="*2"
                 android:textColor="#FFF"
                 android:textSize="32dp" />
 

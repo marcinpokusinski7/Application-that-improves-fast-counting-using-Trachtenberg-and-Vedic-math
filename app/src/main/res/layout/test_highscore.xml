@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:padding="12dp">
+
+
+    <RelativeLayout
+        android:id="@+id/trach"
+        android:layout_width="325dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_item"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/testwed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/testrach"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/robotobold"
+            android:text="Trachtenberg"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/scoretrach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Punkty"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timetrach"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Czas"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/timeone"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Czas"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/scoreone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Punkty"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/testwed"
+        android:layout_width="325dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_item"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/testall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trach">
+
+        <TextView
+            android:id="@+id/wed"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/robotobold"
+            android:text="Wedyjska"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/scorewed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Punkty"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timewed"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Czas"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/timewedyjska"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Czas"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/scorewedyjska"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Punkty"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/testall"
+        android:layout_width="325dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/bg_item"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_bestscore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testwed">
+
+        <TextView
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/robotobold"
+            android:text="Test Ogólny"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/scoreall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Punkty"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/timeall"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Czas"
+            android:textColor="#4a4a4a"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/button_bestscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_item"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotobold"
+
+                android:text="Wróć"
+                android:textColor="#4a4a4a"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

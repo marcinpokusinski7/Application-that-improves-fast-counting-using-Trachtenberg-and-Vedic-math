@@ -6,9 +6,13 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Parcelable;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,8 +50,9 @@ public class TrachtenbergFragment2 extends Fragment {
     private ImageView refresh;
     private ColorStateList textColorDefaultRb;
     int number = new Random().nextInt(10000);
-
-
+    CardView expandableView;
+    Button arrowBtn;
+    CardView cardView;
 
     public TrachtenbergFragment2() {
         // Required empty public constructor
@@ -76,6 +81,30 @@ public class TrachtenbergFragment2 extends Fragment {
         //losowaliczba.setText(generowanieString(6));
         textColorDefaultRb = wynik.getTextColors();
         losowaliczba.setText(Integer.toString(number));
+        expandableView = (CardView) v.findViewById(R.id.expandableView);
+        arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
+        cardView = (CardView) v.findViewById(R.id.cardView);
+
+        arrowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (expandableView.getVisibility()==View.GONE) {
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                    expandableView.setVisibility(View.VISIBLE);
+                    arrowBtn.setBackgroundResource(R.drawable.ic_arrrow_up);
+                }else{
+                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                    expandableView.setVisibility(View.GONE);
+                    arrowBtn.setBackgroundResource(R.drawable.ic_arrow_down);
+                }
+                }
+
+
+        });
+
+
+
+
 
         sprawdz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,13 +139,13 @@ public class TrachtenbergFragment2 extends Fragment {
                 kolumna8.getText().clear();
                 kolumna9.getText().clear();
                 kolumna10.getText().clear();
-
+                wynik.setTextColor(textColorDefaultRb);
 
                 Random rand = new Random();
                 number = rand.nextInt(10000);
                 String myString = String.valueOf(number);
                 losowaliczba.setText(myString);
-                wynik.setTextColor(textColorDefaultRb);
+
 
             }
         });

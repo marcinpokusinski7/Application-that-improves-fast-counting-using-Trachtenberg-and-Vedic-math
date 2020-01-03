@@ -8,17 +8,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 
-import android.app.FragmentTransaction;
-import android.content.ClipData;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.RadioButton;
 
 
-
-import com.example.nawigacja.Rozgrzewka.Rozgrzewkaglowna;
+import com.example.nawigacja.Rozgrzewka.WarmUpBridge;
+import com.example.nawigacja.Rozgrzewka.WarmUpMain;
 import com.example.nawigacja.TestGlowny.TestFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -77,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_message:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new Rozgrzewkaglowna()).commit();
+                        new WarmUpBridge()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

@@ -11,4 +11,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="potegaa"><sup>2</sup></string>
+    <string name="teoria_do_wicze">Teoria do ćwiczeń</string>
+    <string name="title_activity_highscore">Highscore</string>
 </resources>

@@ -4,6 +4,8 @@ package com.example.nawigacja.WedyjskaTeoria;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
@@ -26,7 +28,7 @@ import java.util.Random;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WedyjskaFragmentPotegowanie extends Fragment {
+public class WedyjskaFragmentSub extends Fragment {
     private Button back;
     private EditText kolumna1;
     private EditText kolumna2;
@@ -40,19 +42,21 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
     private EditText kolumna10;
     private TextView losowaliczba;
     private EditText wynik;
-    private Button sprawdz;
+    private Button sprawdz, hund, tho, hundtho;
+
     private ImageView refresh;
     private TextView potega;
-
-    int number;
     CardView expandableView;
     Button arrowBtn;
     CardView cardView;
 
     private ColorStateList textColorDefaultRb;
 
-
-    public WedyjskaFragmentPotegowanie() {
+    int number = 1000;
+    int numbertwo = 10000;
+    int numberthree = 100000;
+    int rande, randtwoe, randthreee;
+    public WedyjskaFragmentSub() {
         // Required empty public constructor
     }
 
@@ -60,11 +64,15 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_wedyjska_potegowanie2, container, false);
+        View v = inflater.inflate(R.layout.fragment_wedyjska_sub, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
         sprawdz = (Button) v.findViewById(R.id.sprawdz);
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
         back = (Button) v.findViewById(R.id.back);
+        hund = (Button) v.findViewById(R.id.hund);
+        tho = (Button) v.findViewById(R.id.tho);
+        hundtho = (Button) v.findViewById(R.id.hundtho);
+        textColorDefaultRb = wynik.getTextColors();
         potega = (TextView) v.findViewById(R.id.potega);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
@@ -82,7 +90,7 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
         expandableView = (CardView) v.findViewById(R.id.expandableView);
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
-        textColorDefaultRb = wynik.getTextColors();
+
         arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,35 +108,125 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
 
         });
 
-
-
-
-
+        potega.setText(Integer.toString(rande));
 
         Random rand = new Random();
-        number = rand.nextInt(1000);
+         rande= rand.nextInt(1000);
+        Random randtwo = new Random();
+        randtwoe = randtwo.nextInt(10000);
+        Random randthree = new Random();
+        randthreee = randthree.nextInt(100000);
 
+
+
+
+
+
+
+                losowaliczba.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        sprawdz.setOnClickListener(new View.OnClickListener() {                // potegowanie liczb z koncowka 5
+                            @Override
+                            public void onClick(View view) {
+                                if (losowaliczba.getText().toString().trim().length() > 0) {
+                                    int a = Integer.parseInt(losowaliczba.getText().toString().trim());
+                                    int b = Integer.parseInt(potega.getText().toString().trim());
+                                    wynik.setText(Integer.toString(a - b));
+                                    wynik.setTextColor(Color.GREEN);
+                                }
+                            }
+                        });
+
+                    }
+                });
+
+
+
+
+        String myStringg = String.valueOf(rande);
+        potega.setText(myStringg);
         String myString = String.valueOf(number);
         losowaliczba.setText(myString);
-        sprawdz.setOnClickListener(new View.OnClickListener() {                // potegowanie liczb z koncowka 5
-            @Override
-            public void onClick(View view) {
-                wynik.setText(Integer.toString(number*number));
-                wynik.setTextColor(Color.GREEN);
-            }
-        });
-
-        refresh.setOnClickListener(new View.OnClickListener() {
+                      // potegowanie liczb z koncowka 5
+        hund.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 wynik.getText().clear();
                 Random rand = new Random();
-                number = rand.nextInt(1000) ;
-                if (number == 0){
-                    number++;
+                rande = rand.nextInt(1000);
 
+
+                if ( rande == 0 ){
+                    rande++;
+                    kolumna1.getText().clear();
+                    kolumna2.getText().clear();
+                    kolumna3.getText().clear();
+                    kolumna4.getText().clear();
+                    kolumna5.getText().clear();
+                    kolumna6.getText().clear();
+                    kolumna7.getText().clear();
+                    kolumna8.getText().clear();
+                    kolumna9.getText().clear();
+                    kolumna10.getText().clear();
+                    wynik.getText().clear();
+                    wynik.setTextColor(textColorDefaultRb);
 
                 }
+
+                String myStringg = String.valueOf(rande);
+                potega.setText(myStringg);
+                String myString = String.valueOf(number);
+                losowaliczba.setText(myString);
+            }
+        });
+
+        tho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                wynik.getText().clear();
+                Random randtwo = new Random();
+                randtwoe = randtwo.nextInt(10000);
+
+
+                if ( randtwoe == 0 ){
+                    randtwoe++;
+                    kolumna1.getText().clear();
+                    kolumna2.getText().clear();
+                    kolumna3.getText().clear();
+                    kolumna4.getText().clear();
+                    kolumna5.getText().clear();
+                    kolumna6.getText().clear();
+                    kolumna7.getText().clear();
+                    kolumna8.getText().clear();
+                    kolumna9.getText().clear();
+                    kolumna10.getText().clear();
+                    wynik.getText().clear();
+                    wynik.setTextColor(textColorDefaultRb);
+
+                }
+
+                String myStringg = String.valueOf(randtwoe);
+                potega.setText(myStringg);
+                String myString = String.valueOf(numbertwo);
+                losowaliczba.setText(myString);
+            }
+        });
+
+        hundtho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                wynik.getText().clear();
+                Random randthree = new Random();
+                randthreee = randthree.nextInt(100000);
                 kolumna1.getText().clear();
                 kolumna2.getText().clear();
                 kolumna3.getText().clear();
@@ -141,16 +239,21 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
                 kolumna10.getText().clear();
 
                 wynik.setTextColor(textColorDefaultRb);
-                String myString = String.valueOf(number);
+
+                if ( randthreee == 0 ){
+                    randthreee++;
+
+                }
+
+                String myStringg = String.valueOf(randthreee);
+                potega.setText(myStringg);
+                String myString = String.valueOf(numberthree);
                 losowaliczba.setText(myString);
             }
         });
 
 
 
-
-
-        potega.setText("\u00B2");
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -189,3 +292,4 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
     }*/
 
 }
+

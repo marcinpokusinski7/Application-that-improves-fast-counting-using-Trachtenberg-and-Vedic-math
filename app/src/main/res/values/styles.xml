@@ -11,15 +11,23 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item> //Przezroczysty pasek systemowy
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        //Przezroczysty pasek systemowy
     </style>
+
     <style name="Theme.Design.NoActionBar2">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item> //Przezroczysty pasek systemowy
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        //Przezroczysty pasek systemowy
     </style>
+
     <style name="Style_TextView">
         <item name="fontFamily">@font/robotobold</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

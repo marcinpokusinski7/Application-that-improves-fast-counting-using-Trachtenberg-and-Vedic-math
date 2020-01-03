@@ -21,7 +21,7 @@ public class Test {
     }
 
     public void makeNewQuestion(){
-        currentQuestion = new Question(totalQuestions * 2+5);
+        currentQuestion = new Question(totalQuestions * 2+7);
         totalQuestions++;
         questions.add(currentQuestion);
     }

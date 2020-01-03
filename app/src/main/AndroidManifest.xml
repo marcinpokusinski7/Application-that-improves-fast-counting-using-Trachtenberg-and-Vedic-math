@@ -9,13 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestActivity"></activity>
-        <activity android:name=".TestGlowny.TestFragment"></activity>
-        <activity android:name=".TestGlowny.TestActivityTrachtenberg"></activity>
-        <activity android:name=".TestGlowny.Testact"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".TestGlowny.TestFragment" />
+        <activity
+            android:name=".TestGlowny.Testact"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestGlowny.Testwed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestGlowny.TestHighscore"/>
+        <activity
+            android:name=".TestGlowny.Testall"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.Design.NoActionBar"></activity>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.Design.NoActionBar">
@@ -25,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
