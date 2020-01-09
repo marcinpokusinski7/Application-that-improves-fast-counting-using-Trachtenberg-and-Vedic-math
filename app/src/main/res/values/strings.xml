@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Szybka pamięć</string>
     <string name="zacznij">Aplikacja wspomagająca naukę metod szybkiego liczenia w pamięci</string>
     <string name="todo">TODO</string>
     <string name="tutorial">WZTM</string>

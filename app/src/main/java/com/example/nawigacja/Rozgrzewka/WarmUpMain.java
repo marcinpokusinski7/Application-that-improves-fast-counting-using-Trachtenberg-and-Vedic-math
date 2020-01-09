@@ -97,7 +97,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
 
         textViewTime.setText("0 sekund");
         textViewQuestion.setText("");
-        textViewScore.setText("Wynik: 0");
+        textViewScore.setText("Wynik:0");
 
 
         View.OnClickListener startButtonClickListener = new View.OnClickListener() {
@@ -127,7 +127,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
                 int answerSelected = Integer.parseInt(buttonClicked.getText().toString());
                 btn_start.setVisibility(View.INVISIBLE);
                 t.checkAnswer(answerSelected);
-                textViewScore.setText("Wynik: " + t.getScore());
+                textViewScore.setText("Wynik:" + t.getScore());
 
                 nextQuestion();
 
@@ -167,7 +167,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
     }
 
 
-    
+
 
 
 }
