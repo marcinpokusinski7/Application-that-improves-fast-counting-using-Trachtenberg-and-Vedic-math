@@ -30,10 +30,11 @@ import java.util.Locale;
 
 public class TestActivity extends AppCompatActivity {
         public static final String EXTRA_SCORE = "Dodatkowy_Wynik";
-
+    public static final String EXTRA_SCORE1 = "Dodatkowy_Wynik1";
         private static final long COUNTDOWN_IN_MILLIS = 30000;
 
         private static final String KEY_SCORE = "keyScore";
+    private static final String KEY_SCORE1 = "keyScore";
         private static final String KEY_QUESTION_COUNT = "keyQuestionCount";
         private static final String KEY_MILLIS_LEFT = "keyMillisLeft";
         private static final String KEY_ANSWERED = "keyAnswered";
@@ -66,6 +67,7 @@ public class TestActivity extends AppCompatActivity {
         private Pytania danepytanie;        //na ktorym pytaniu jestesmy
 
         private int wynik;
+        private int wynik1;
 
         private boolean odpowiedz; //odpowiada za to co sie stanie kiedy klikniemy przycisk potwierdz, jezeli nie odpowiedziales pokazuje nastepne pytanie
         private long przyciskwroc;
@@ -114,6 +116,7 @@ public class TestActivity extends AppCompatActivity {
             licznikPytan = savedInstanceState.getInt(KEY_QUESTION_COUNT);
             danepytanie = pytaniaList.get(licznikPytan - 1);
             wynik = savedInstanceState.getInt(KEY_SCORE);
+            wynik1 = savedInstanceState.getInt(KEY_SCORE);
             timeLeftInMillis = savedInstanceState.getLong(KEY_MILLIS_LEFT);
             odpowiedz = savedInstanceState.getBoolean(KEY_ANSWERED);
 
@@ -217,6 +220,7 @@ public class TestActivity extends AppCompatActivity {
 
                 if (odpowiedzNr == danepytanie.getOdpowiedznr()) {
                     wynik++;
+                    wynik1++;
                     textViewWynik.setText("Wynik: " + wynik);
 
                 }
@@ -258,8 +262,11 @@ public class TestActivity extends AppCompatActivity {
 
             private void finishCwiczenia() {
         Intent wynikIntent = new Intent();
+                Intent wynikIntent1 = new Intent();
         wynikIntent.putExtra(EXTRA_SCORE, wynik);
+                wynikIntent1.putExtra(EXTRA_SCORE1, wynik1);
         setResult(RESULT_OK, wynikIntent);
+                setResult(RESULT_OK, wynikIntent1);
                   finish();
             }
 

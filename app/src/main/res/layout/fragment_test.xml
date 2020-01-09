@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="Test"
         android:fontFamily="@font/robotobold"
-        android:textColor="#8a8a8a"
+        android:textColor="#FFF"
         android:textSize="26sp" />
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_marginBottom="30dp"
         android:gravity="center"
         android:text="Miejsce w którym sprawdzisz swoje umiejętności i będziesz rozwiązywał zadania porównując czas z każdym następnym rozwiązaniem"
-        android:textColor="#9a9a9a"
+        android:textColor="#FFF"
         android:textSize="16sp"
         android:textStyle="bold"/>
 
@@ -47,7 +47,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginRight="5dp"
-            android:background="@drawable/ic_glowna" />
+            android:background="@drawable/ic_trachtenberg" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -66,8 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="Test z zagadanień Trachtenberga"
-                android:textColor="#bebebe"
+                android:text="Test z iloczyńow Trachtenberga"
+                android:textColor="#999999"
                 android:textSize="14sp" />
 
             <TextView
@@ -99,12 +99,13 @@
         >
 
 
-
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_glowna"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_wed" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -123,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test losowy z matematyki wedyjskiej."
-                android:textColor="#bebebe"
+                android:textColor="#999999"
                 android:fontFamily="@font/robotomedium"
                 android:textSize="14sp" />
 
@@ -159,7 +160,8 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_glowna"
+            android:background="@drawable/ic_general"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"/>
 
         <LinearLayout
@@ -170,7 +172,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test wspólny"
+                android:text="Test Ogólny"
                 android:fontFamily="@font/robotobold"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp" />
@@ -179,7 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test losowy z matematyki wedyjskiej i Trachtenberga."
-                android:textColor="#bebebe"
+                android:textColor="#999999"
                 android:fontFamily="@font/robotomedium"
                 android:textSize="14sp" />
 
@@ -198,13 +200,14 @@
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/button_bestscore"
+        android:id="@+id/button_best"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
+        android:layout_marginTop="25dp"
 
         android:background="@drawable/bg_item"
         android:orientation="horizontal"
@@ -217,9 +220,12 @@
 
 
         <LinearLayout
+
+            android:id="@+id/button_bestscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+
             android:layout_gravity="center">
 
             <TextView

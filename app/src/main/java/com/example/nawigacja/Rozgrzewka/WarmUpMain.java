@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -12,9 +13,11 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.nawigacja.R;
@@ -22,7 +25,7 @@ import com.example.nawigacja.R;
 public class WarmUpMain extends Fragment {
     Test t = new Test();
 
-
+        private long przyciskwroc;
     private TextView textViewQuestion, textViewScore, textViewPytanielicznik, textViewTime, tv_bottom;
 
 
@@ -33,17 +36,17 @@ public class WarmUpMain extends Fragment {
     private Button rb4;
     private Button btn_start;    //przycisk potwierdzajacy przenieienie dalej
     ProgressBar prog_timer;
+    private ConstraintLayout click;
 
 
+    int secondRemaining = 31;
 
-    int secondRemaining = 30;
-
-    CountDownTimer timer = new CountDownTimer(30000, 1000) {
+    CountDownTimer timer = new CountDownTimer(31000, 1000) {
         @Override
         public void onTick(long l) {
             secondRemaining=secondRemaining-1;
             textViewTime.setText(Integer.toString(secondRemaining)+" sekund");
-            prog_timer.setProgress(30-secondRemaining);
+            prog_timer.setProgress(31-secondRemaining);
 
         }
 
@@ -78,7 +81,7 @@ public class WarmUpMain extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-
+        click = v.findViewById(R.id.click);
         textViewQuestion = v.findViewById(R.id.textViewQuestion);
         textViewScore = v.findViewById(R.id.textViewScore);
         textViewPytanielicznik = v.findViewById(R.id.text_view_question_count);
@@ -96,6 +99,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
         textViewQuestion.setText("");
         textViewScore.setText("Wynik: 0");
 
+
         View.OnClickListener startButtonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,7 +107,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
 
 
                 btn_start.setVisibility(View.INVISIBLE);
-                secondRemaining = 30;
+                secondRemaining = 31;
                 t = new Test();
                 timer.start();
 
@@ -137,9 +141,9 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
         rb3.setOnClickListener(answerButtonClickListener);
         rb4.setOnClickListener(answerButtonClickListener);
 
-
+       timer.start();
         nextQuestion();
-        timer.start();
+
         return v;
     }
 
@@ -163,6 +167,7 @@ tv_bottom = v.findViewById(R.id.tv_bottom);
     }
 
 
+    
 
 
 }

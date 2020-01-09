@@ -1,5 +1,6 @@
 package com.example.nawigacja.TestGlowny;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
@@ -16,8 +17,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.nawigacja.GlownaFragment;
 import com.example.nawigacja.R;
+import com.example.nawigacja.TrachtenbergFragment;
+import com.example.nawigacja.WedyjskaTeoria.WedyjskaFragmentBydeficiency;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,13 +32,13 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class TestHighscore extends AppCompatActivity {
-        TextView timeone, scoreone, scorewedyjska, timewedyjska ;
+        TextView timeone, scoreone, scorewedyjska, timewedyjska, scoreall, timeall ;
         LinearLayout back;
 
-        int lastscore, lastscore1;
-        long lasttime, lasttime1;
-        int best1, best2, best3, best4, best5, best6;
-        long time1, time2, time3, time4, time5, time6;
+        int lastscore, lastscorewed, lastscoreall;
+        long lasttime, lasttimewed, lasttimeall;
+        int best1, best2, best3, best4, best5, best6, best7, best8, best9;
+        long time1, time2, time3, time4, time5, time6, time7, time8, time9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +48,9 @@ public class TestHighscore extends AppCompatActivity {
     scoreone = (TextView) findViewById(R.id.scoreone);
     scorewedyjska = (TextView) findViewById(R.id.scorewedyjska);
         timewedyjska = (TextView) findViewById(R.id.timewedyjska);
+        scoreall = (TextView) findViewById(R.id.scoreall);
+        timeall = (TextView) findViewById(R.id.timeall);
     back = (LinearLayout) findViewById(R.id.button_bestscore);
-
 
 
 
@@ -60,16 +67,27 @@ public class TestHighscore extends AppCompatActivity {
 
         SharedPreferences preferences1 = getSharedPreferences("PREFSWED",0);
         SharedPreferences preferences2 = getSharedPreferences("PREFSWED",0);
-        lastscore1 = preferences1.getInt("lastscorewed", 0);
+        lastscorewed = preferences1.getInt("lastscorewed", 0);
         best4 = preferences1.getInt("best4", 0);
         best5 = preferences1.getInt("best5", 0);
         best6 = preferences1.getInt("best6", 0);
-        lasttime1 = preferences2.getLong("lasttimewed", 0);
+        lasttimewed = preferences2.getLong("lasttimewed", 0);
         time4 = preferences2.getLong("time4", 0);
         time5 = preferences2.getLong("time5", 0);
         time6 = preferences2.getLong("time6", 0);
 
-        if(lastscore > best3){
+        SharedPreferences preferences3 = getSharedPreferences("PREFSALL",0);
+        SharedPreferences preferences4 = getSharedPreferences("PREFSALL",0);
+        lastscoreall = preferences3.getInt("lastscoreall", 0);
+        best7 = preferences3.getInt("best7", 0);
+        best8 = preferences3.getInt("best8", 0);
+        best9 = preferences3.getInt("best9", 0);
+        lasttimeall = preferences4.getLong("lasttimeall", 0);
+        time7 = preferences4.getLong("time7", 0);
+        time8 = preferences4.getLong("time8", 0);
+        time9 = preferences4.getLong("time9", 0);
+
+       /*if(lastscore > best3){
             best3 = lastscore;
             SharedPreferences.Editor editor = preferences.edit();
             editor.putInt("best3",best3);
@@ -118,7 +136,7 @@ public class TestHighscore extends AppCompatActivity {
 
 
 
-        }
+        }*/
         long milis= time1;
         long milis1= time2;
         long milis2 = time3;
@@ -137,20 +155,20 @@ public class TestHighscore extends AppCompatActivity {
                         "" +String.format(Locale.getDefault(),"%02d:%02d",min1,sec1) + "\n"+
                         "" +String.format(Locale.getDefault(),"%02d:%02d",min2,sec2) + "\n");
 
-        if(lastscore1 > best6){
-            best6 = lastscore1;
+        /*if(lastscorewed > best6){
+            best6 = lastscorewed;
             SharedPreferences.Editor editorwed = preferences1.edit();
             editorwed.putInt("best6",best6);
             editorwed.apply();
 
-            time6 = lasttime1;
+            time6 = lasttimewed;
             SharedPreferences.Editor editorwedt = preferences2.edit();
             editorwedt.putLong("time6",time6);
             editorwedt.apply();
         }
-        if(lastscore1 > best5){
+        if(lastscorewed > best5){
             int temp = best5;
-            best5 = lastscore1;
+            best5 = lastscorewed;
             best6= temp;
             SharedPreferences.Editor editorwed = preferences1.edit();
             editorwed.putInt("best5",best5);
@@ -158,7 +176,7 @@ public class TestHighscore extends AppCompatActivity {
             editorwed.apply();
 
             long temptime = time5;
-            time5 = lasttime;
+            time5 = lasttimewed;
             time6 = temptime;
             SharedPreferences.Editor editorwedt = preferences2.edit();
             editorwedt.putLong("time5",time5);
@@ -166,9 +184,9 @@ public class TestHighscore extends AppCompatActivity {
             editorwedt.apply();
 
         }
-        if(lastscore1 > best4){
+        if(lastscorewed > best4){
             int temp = best4;
-            best4 = lastscore1;
+            best4 = lastscorewed;
             best5= temp;
             SharedPreferences.Editor editorwed = preferences1.edit();
             editorwed.putInt("best5",best5);
@@ -177,7 +195,7 @@ public class TestHighscore extends AppCompatActivity {
 
 
             long temptime = time4;
-            time4 = lasttime1;
+            time4 = lasttimewed;
             time5 = temptime;
             SharedPreferences.Editor editorwedt = preferences2.edit();
             editorwedt.putLong("time5",time5);
@@ -186,7 +204,7 @@ public class TestHighscore extends AppCompatActivity {
 
 
 
-        }
+        }*/
         long milis4= time4;
         long milis5= time5;
         long milis6 = time6;
@@ -202,8 +220,92 @@ public class TestHighscore extends AppCompatActivity {
                 "" +best5 + "\n"+
                 "" +best6 + "\n");
         timewedyjska.setText("" +String.format(Locale.getDefault(),"%02d:%02d",minutes4,seconds4) + "\n"+
-                "" +String.format(Locale.getDefault(),"%02d:%02d",min5,sec5) + "\n"+
-                "" +String.format(Locale.getDefault(),"%02d:%02d",min6,sec6) + "\n");
+                             "" +String.format(Locale.getDefault(),"%02d:%02d",min5,sec5) + "\n"+
+                             "" +String.format(Locale.getDefault(),"%02d:%02d",min6,sec6) + "\n");
+
+
+        if(lastscoreall > best9){
+            best9 = lastscoreall;
+            SharedPreferences.Editor editorall = preferences3.edit();
+            editorall.putInt("best9",best9);
+            editorall.apply();
+
+            time9 = lasttimeall;
+            SharedPreferences.Editor editortimeall = preferences4.edit();
+            editortimeall.putLong("time9",time9);
+            editortimeall.apply();
+        }
+        if(lastscoreall > best8){
+            int temp = best8;
+            best8 = lastscoreall;
+            best9= temp;
+            SharedPreferences.Editor editorall = preferences3.edit();
+            editorall.putInt("best8",best8);
+            editorall.putInt("best9",best9);
+            editorall.apply();
+
+            long temptime = time8;
+            time8 = lasttimeall;
+            time9 = temptime;
+            SharedPreferences.Editor editortimeall = preferences4.edit();
+            editortimeall.putLong("time8",time8);
+            editortimeall.putLong("time9",time9);
+            editortimeall.apply();
+
+        }
+        if(lastscoreall > best7){
+            int temp = best7;
+            best7 = lastscoreall;
+            best8= temp;
+            SharedPreferences.Editor editorall = preferences3.edit();
+            editorall.putInt("best8",best8);
+            editorall.putInt("best7",best7);
+            editorall.apply();
+
+
+            long temptime = time7;
+            time7 = lasttimeall;
+            time8 = temptime;
+            SharedPreferences.Editor editortimeall = preferences4.edit();
+            editortimeall.putLong("time8",time8);
+            editortimeall.putLong("time7",time7);
+            editortimeall.apply();
+
+
+
+        }
+        long milis7= time7;
+        long milis8= time8;
+        long milis9 = time9;
+        long min7 = (milis7 / 1000) / 60;
+        long sec7 =  (milis7/ 1000) % 60;
+        long min8 =  (milis8 / 1000) / 60;
+        long sec8 =  (milis8 / 1000) % 60;
+        long min9=   (milis9 / 1000) / 60;
+        long sec9 = (milis9 / 1000) % 60;
+
+
+        scoreall.setText("" +best7 + "\n"+
+                "" +best8 + "\n"+
+                "" +best9 + "\n");
+        timeall.setText("" +String.format(Locale.getDefault(),"%02d:%02d",min7,sec7) + "\n"+
+                "" +String.format(Locale.getDefault(),"%02d:%02d",min8,sec8) + "\n"+
+                "" +String.format(Locale.getDefault(),"%02d:%02d",min9,sec9) + "\n");
+
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                finish();
+
+
+                }
+
+        });
+
+
+
 
     }
 

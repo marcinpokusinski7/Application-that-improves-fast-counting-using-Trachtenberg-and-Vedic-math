@@ -34,11 +34,12 @@ public class CwiczeniaFragment extends Fragment {
 
     public static final String SHARED_PREFS = "sharedPrefs";
         public static final String KEY_HIGHSCORE = "keyHighscore";
+    public static final String KEY_HIGHSCORE1 = "keyHighscore";
 
-        private TextView textViewHighscore;
+        private TextView textViewHighscore,textViewHighscore1;
         private Spinner spinerCategory;
 
-        private int highscore;
+        private int highscore, highscore1, highscore2;
 
 
 
@@ -49,12 +50,15 @@ public class CwiczeniaFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_cwiczenia, container, false);
         spinerCategory = v.findViewById(R.id.spiner_kat);
         textViewHighscore = v.findViewById(R.id.highscore);
+        textViewHighscore1 = v.findViewById(R.id.highscore1);
+
         loadKategorie();
         loadHighscore();
+        loadHighscore1();
 
             final LinearLayout Button_cwiczenia = v.findViewById(R.id.Button_cwiczenia);
             final LinearLayout Button_cwiczenia1 = v.findViewById(R.id.Button_cwiczenia1);
-            final LinearLayout Button_cwiczenia2 = v.findViewById(R.id.Button_cwiczenia2);
+
 
         Button_cwiczenia1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,17 +71,7 @@ public class CwiczeniaFragment extends Fragment {
                 startCwiczenia1();
             }
         });
-        Button_cwiczenia2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Button_cwiczenia2.setBackgroundResource(R.drawable.bg_item_cho);
-                //przycisk do cwiczen z podswietleniem na szaro, wyswietla fragment cwiczenia
-                //Intent intent = new Intent(view.getContext(), TestActivity.class);moje
-                //view.getContext().startActivity(intent);  moje
 
-                startCwiczenia2();
-            }
-        });
 
 
 
@@ -153,8 +147,13 @@ public class CwiczeniaFragment extends Fragment {
         if(requestCode == REQUEST_CODE_QUIZ){
             if(resultCode == RESULT_OK){
                 int wynik = data.getIntExtra(TestActivity.EXTRA_SCORE, 0);
+                int wynik1 = data.getIntExtra(TestActivity.EXTRA_SCORE1, 0);
                 if(wynik > highscore ){
                     updateHighscore(wynik);
+
+                }
+                if(wynik1 > highscore1){
+                    updateHighscore1(wynik1);
                 }
             }
         }
@@ -175,17 +174,31 @@ public class CwiczeniaFragment extends Fragment {
     private void loadHighscore(){
         SharedPreferences prefs = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("Highscore: " + highscore);
+        textViewHighscore.setText("Najlepszy wynik: " + highscore);
+    }
+    private void loadHighscore1(){
+        SharedPreferences prefs1 = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        highscore1 = prefs1.getInt(KEY_HIGHSCORE1, 0);
+        textViewHighscore1.setText("Najlepszy wynik: " + highscore1);
     }
 
 
     private void updateHighscore(int highscoreNew){
         highscore = highscoreNew;
-        textViewHighscore.setText("Highscore: " + highscore);
+        textViewHighscore.setText("Najlepszy wynik: " + highscore);
 
         SharedPreferences prefs = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_HIGHSCORE, highscore);
+        editor.apply();
+    }
+    private void updateHighscore1(int highscoreNew1){
+        highscore1 = highscoreNew1;
+        textViewHighscore1.setText("Najlepszy wynik: " + highscore1);
+
+        SharedPreferences prefs1 = this.getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs1.edit();
+        editor.putInt(KEY_HIGHSCORE1, highscore1);
         editor.apply();
     }
 

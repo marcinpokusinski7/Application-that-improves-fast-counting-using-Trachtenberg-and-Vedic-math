@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/robotomedium"
-        android:text="Zadanie do wykonania"
+        android:text="Ćwiczenia do wykonania"
         android:textColor="#9e9e9e"
         android:textSize="18dp" />
 
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotomedium"
-                    android:text="Matematyka Wedyjska - nazwa zbioru algorytmów, dzięki którym mamy możliwość rozwiązać pewne problemy rachunkowe. Reguły te zostały stworzone przez hinduiskiego duchownego Bhartiego Kriszna w XX wieku. "
+                    android:text="Matematyka Wedyjska - nazwa zbioru algorytmów, którą możemy zastosować aby rozwiązać pewne problemy rachunkowe. Reguły te zostały stworzone przez hinduiskiego duchownego Bhartiego Kriszna Tirtha w XX wieku. "
                     android:textColor="#FFF"
                     android:textSize="18dp" />
 
@@ -92,7 +92,7 @@
         android:layout_marginTop="14dp"
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/robotoregular"
-        android:text="Wybierz numer cwiczenia"
+        android:text="Wybierz ćwiczenie"
         android:textColor="#FFF"
         android:textSize="18dp" />
     <ScrollView
@@ -132,11 +132,14 @@
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:requiresFadingEdge="vertical"
                     android:layout_alignParentRight="true"
+
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_powerfive" />
 
             </RelativeLayout>
 
@@ -165,11 +168,13 @@
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="5dp"
+
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_powertwo" />
 
             </RelativeLayout>
 
@@ -199,17 +204,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:text="Mnożenie liczb do 100"
+                    android:text="Mnożenie liczb bliskich 100"
                     android:padding="2dp"
                     android:textColor="#5e5e5e"
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+
+
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+
+                    android:src="@drawable/hun" />
 
             </RelativeLayout>
 
@@ -233,17 +241,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:text="Numer 4"
+                    android:text="Odejmowanie od potęg dodatnich liczby 10"
                     android:padding="2dp"
                     android:textColor="#5e5e5e"
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:requiresFadingEdge="vertical"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_subtract" />
 
             </RelativeLayout>
 
@@ -274,17 +284,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
-                    android:text="Numer 3"
+                    android:text="Mnożenie dowolnych liczb dwucyfrowych"
                     android:padding="2dp"
                     android:textColor="#5e5e5e"
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_multiply" />
 
             </RelativeLayout>
 

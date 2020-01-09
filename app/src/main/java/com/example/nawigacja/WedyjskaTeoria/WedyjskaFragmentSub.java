@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -29,7 +30,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class WedyjskaFragmentSub extends Fragment {
-    private Button back;
+    private LinearLayout back;
     private EditText kolumna1;
     private EditText kolumna2;
     private EditText kolumna3;
@@ -40,10 +41,15 @@ public class WedyjskaFragmentSub extends Fragment {
     private EditText kolumna8;
     private EditText kolumna9;
     private EditText kolumna10;
+    private EditText kolumna11;
+    private EditText kolumna12;
+    private EditText kolumna13;
+    private EditText kolumna14;
+    private EditText kolumna15;
     private TextView losowaliczba;
     private EditText wynik;
-    private Button sprawdz, hund, tho, hundtho;
-
+    private Button hund, tho, hundtho;
+    private LinearLayout sprawdz;
     private ImageView refresh;
     private TextView potega;
     CardView expandableView;
@@ -66,9 +72,9 @@ public class WedyjskaFragmentSub extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_wedyjska_sub, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
-        sprawdz = (Button) v.findViewById(R.id.sprawdz);
+        sprawdz = (LinearLayout) v.findViewById(R.id.button_sprawdz);
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
-        back = (Button) v.findViewById(R.id.back);
+        back = (LinearLayout) v.findViewById(R.id.button_back);
         hund = (Button) v.findViewById(R.id.hund);
         tho = (Button) v.findViewById(R.id.tho);
         hundtho = (Button) v.findViewById(R.id.hundtho);
@@ -84,6 +90,12 @@ public class WedyjskaFragmentSub extends Fragment {
         kolumna8 = (EditText) v.findViewById(R.id.kolumna8);
         kolumna9 = (EditText) v.findViewById(R.id.kolumna9);
         kolumna10 = (EditText) v.findViewById(R.id.kolumna10);
+        kolumna11 = (EditText) v.findViewById(R.id.kolumna11);
+        kolumna12= (EditText) v.findViewById(R.id.kolumna12);
+        kolumna13 = (EditText) v.findViewById(R.id.kolumna13);
+        kolumna14 = (EditText) v.findViewById(R.id.kolumna14);
+        kolumna15 = (EditText) v.findViewById(R.id.kolumna15);
+
         refresh = (ImageView) v.findViewById(R.id.refresh);
         //losowaliczba.setText(generowanieString(6));
         losowaliczba.setText(Integer.toString(number));
@@ -91,7 +103,7 @@ public class WedyjskaFragmentSub extends Fragment {
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
 
-        arrowBtn.setOnClickListener(new View.OnClickListener() {
+        /*arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (expandableView.getVisibility()==View.GONE) {
@@ -106,7 +118,7 @@ public class WedyjskaFragmentSub extends Fragment {
             }
 
 
-        });
+        });*/
 
         potega.setText(Integer.toString(rande));
 
@@ -177,6 +189,11 @@ public class WedyjskaFragmentSub extends Fragment {
                     kolumna8.getText().clear();
                     kolumna9.getText().clear();
                     kolumna10.getText().clear();
+                    kolumna11.getText().clear();
+                    kolumna12.getText().clear();
+                    kolumna13.getText().clear();
+                    kolumna14.getText().clear();
+                    kolumna15.getText().clear();
                     wynik.getText().clear();
                     wynik.setTextColor(textColorDefaultRb);
 
@@ -270,6 +287,17 @@ public class WedyjskaFragmentSub extends Fragment {
         });
 
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WedyjskaFragmentSubTeory wedyjskaFragmentSubTeory = new WedyjskaFragmentSubTeory();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                transaction.replace(R.id.fragment_container, wedyjskaFragmentSubTeory);
+                cardView.setBackgroundResource(R.drawable.bg_item_cho);
+                transaction.commit();
+            }
+        });
 
 
         return v;

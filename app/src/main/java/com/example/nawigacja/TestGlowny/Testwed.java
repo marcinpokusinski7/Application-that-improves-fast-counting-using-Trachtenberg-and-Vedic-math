@@ -10,6 +10,7 @@ import android.os.CountDownTimer;
 import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -34,6 +35,7 @@ public class Testwed extends AppCompatActivity{
     int random4 = new Random().nextInt(100-11) + 11;
     int random5 = new Random().nextInt(100-11) + 11;
     int deficiency = new Random().nextInt(99-80)+80;
+    int deficiency1 = new Random().nextInt(99-80)+80;
     int number = new Random().nextInt(1000/5)*5;
 
     int sub = 100000;
@@ -76,6 +78,8 @@ public class Testwed extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_glowny_wedyjska);
 
+
+
         final TextView score = (TextView)findViewById(R.id.text_view_score);
         submitbutton=(Button)findViewById(R.id.button_confirm_next);
         tvtimer = findViewById(R.id.text_view_countdown);
@@ -87,7 +91,7 @@ public class Testwed extends AppCompatActivity{
         rb3 =(RadioButton) findViewById(R.id.radio_button3);
         rb4=(RadioButton)findViewById(R.id.radio_button4);
         rbGroup = findViewById(R.id.radio_group);
-
+        lastTimeRecorded = System.currentTimeMillis();
         lay = (RadioGroup) findViewById(R.id.radio_group);
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = tvtimer.getTextColors();
@@ -104,8 +108,8 @@ public class Testwed extends AppCompatActivity{
                 ""+number*number, ""+(number*number+rand3), 3));
         queList.add(new QuestionClass("Jaki jest poprawny wynik różnicy liczb: " +sub +"-" +random3 , ""+(sub-random3+rand2), ""+(sub-random3+rand3),
                 ""+(sub-random3), ""+(sub-random3+rand1), 3));
-        queList.add(new QuestionClass("Wybierz poprawny wynik potęgi kwadratowej: " +deficiency +("\u00B2") , ""+(deficiency*deficiency+rand3), ""+(deficiency*deficiency+rand2),
-                ""+deficiency*deficiency, ""+(deficiency*deficiency+rand1), 3));
+        queList.add(new QuestionClass("Wybierz poprawny wynik iloczynu liczb: " +(deficiency*deficiency1) , ""+(deficiency*deficiency1+rand3), ""+(deficiency*deficiency1+rand2),
+                ""+deficiency*deficiency1, ""+(deficiency*deficiency1+rand1), 3));
         queList.add(new QuestionClass("Jaki jest wynik iloczynu liczb: " +random4 +"*" +random5 , ""+(random4*random5+rand1), ""+(random4*random5+rand2),
                 ""+random4*random5, ""+(random4*random5+rand3), 3));
 
@@ -223,7 +227,7 @@ public class Testwed extends AppCompatActivity{
 
 
         } else {
-            Intent intent = new Intent(getApplicationContext(), TestHighscore.class);
+            Intent intent = new Intent(getApplicationContext(), TestHighscorewed.class);
             startActivity(intent);
             finishTest();
 

@@ -4,14 +4,13 @@ package com.example.nawigacja.WedyjskaTeoria;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -27,7 +26,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
-    private Button back;
+    private LinearLayout back;
     private EditText kolumna1;
     private EditText kolumna2;
     private EditText kolumna3;
@@ -40,7 +39,7 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
     private EditText kolumna10;
     private TextView losowaliczba;
     private EditText wynik;
-    private Button sprawdz;
+    private LinearLayout sprawdz;
     private ImageView refresh;
     private TextView potega;
 
@@ -62,9 +61,11 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_wedyjska_potegowanie5, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
-        sprawdz = (Button) v.findViewById(R.id.sprawdz);
+
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
-        back = (Button) v.findViewById(R.id.back);
+        sprawdz = (LinearLayout) v.findViewById(R.id.sprawdz);
+        back = (LinearLayout) v.findViewById(R.id.back);
+
         potega = (TextView) v.findViewById(R.id.potega);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
@@ -83,7 +84,7 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
         textColorDefaultRb = wynik.getTextColors();
-        arrowBtn.setOnClickListener(new View.OnClickListener() {
+        /*arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (expandableView.getVisibility()==View.GONE) {
@@ -98,7 +99,7 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
             }
 
 
-        });
+        });*/
 
 
 
@@ -159,7 +160,7 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                WedyjskaFragment wedyjskaFragment = new WedyjskaFragment();
+                WedyjskaFragment wedyjskaFragment= new WedyjskaFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, wedyjskaFragment);
@@ -169,6 +170,17 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
             }
         });
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WedyjskaFragmentPFiveTeory wedyjskaFragmentPFiveTeory= new WedyjskaFragmentPFiveTeory();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                transaction.replace(R.id.fragment_container, wedyjskaFragmentPFiveTeory);
+                cardView.setBackgroundResource(R.drawable.bg_item_cho);
+                transaction.commit();
+            }
+        });
 
 
 

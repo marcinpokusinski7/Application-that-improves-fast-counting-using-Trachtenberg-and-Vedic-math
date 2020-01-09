@@ -98,7 +98,7 @@
         android:layout_marginTop="14dp"
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/robotoregular"
-        android:text="Wybierz numer cwiczenia"
+        android:text="Wybierz ćwiczenie"
         android:textColor="#FFF"
         android:textSize="18dp" />
     <ScrollView
@@ -138,11 +138,11 @@
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="84dp"
+                    android:layout_height="87dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_two" />
 
             </RelativeLayout>
 
@@ -171,11 +171,13 @@
                     android:textSize="18dp" />
 
                 <ImageView
-                    android:layout_width="87dp"
-                    android:layout_height="99dp"
+                    android:layout_width="82dp"
+                    android:layout_height="88dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="-2dp"
+                    android:src="@drawable/ic_three" />
 
             </RelativeLayout>
 
@@ -215,7 +217,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_four" />
 
             </RelativeLayout>
 
@@ -249,7 +251,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_five" />
 
             </RelativeLayout>
 
@@ -289,7 +291,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_six" />
 
             </RelativeLayout>
 
@@ -323,7 +325,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_seven" />
 
             </RelativeLayout>
 
@@ -363,7 +365,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_eight" />
 
             </RelativeLayout>
 
@@ -397,7 +399,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_nine" />
 
             </RelativeLayout>
 
@@ -437,7 +439,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_plusjeden" />
+                    android:src="@drawable/ic_eleven" />
 
             </RelativeLayout>
 
@@ -471,7 +473,7 @@
                     android:layout_height="99dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/ic_trachtenberg" />
+                    android:src="@drawable/ic_twelve" />
 
             </RelativeLayout>
 

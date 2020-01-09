@@ -12,13 +12,15 @@
     android:layout_height="match_parent"
     android:id="@+id/card_category"
     android:background="@drawable/gradient"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
 
     <Spinner
         android:id="@+id/spiner_kat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_gravity="right"
         android:layout_marginTop="16dp"
         />
@@ -27,13 +29,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/robotobold"
         android:gravity="center"
-        android:text="Cwiczenia"
-        android:textColor="#8a8a8a"
+        android:text="Pytania teoretyczne"
+        android:textColor="#FFF"
         android:textSize="26sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/robotomedium"
+        android:gravity="center"
+        android:text="W tej zakładce znajdują sie pytania teoretyczne z zagadnień poruszanych w aplikacji. Do wyboru są pytania teoretyczne z Matematyki wedyjskiej i system Trachtenberga. "
+        android:textColor="#FFF"
+        android:textSize="18sp" />
 
 
 
@@ -55,7 +66,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_plusjeden" />
+            android:background="@drawable/ic_trachtenberg" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -66,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotobold"
-                android:text="Pytania z bazy danych"
+                android:text="Quiz Trachtenberg"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp" />
 
@@ -74,12 +85,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="lorem ipsum cos tam dalej jedz"
-                android:textColor="#bebebe"
+                android:text="Quiz składający się z pytań teoretycznych z wykorzystywania metody mnożenia sposobem Trachtenberga."
+                android:textColor="#999999"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/highscore"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
@@ -110,7 +122,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_glowna"
+            android:background="@drawable/ic_wed"
             android:layout_marginRight="5dp"/>
 
         <LinearLayout
@@ -122,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotobold"
-                android:text="Pytania z bazy danych"
+                android:text="Quiz Matematyka wedyjska"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp" />
 
@@ -130,12 +142,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="lorem ipsum at veo lorem ipsum"
-                android:textColor="#bebebe"
+                android:text="Quiz teoretyczny z poruszanych zagadnień wykorzystywanych w matematyce wedyjskiej."
+                android:textColor="#999999"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/highscore1"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
@@ -148,61 +161,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/Button_cwiczenia2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/bg_item"
-        android:orientation="horizontal"
-        android:padding="12dp"
 
-        >
-
-
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/ic_glowna"
-            android:layout_marginRight="5dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/robotobold"
-                android:text="Pytania z bazy danych"
-                android:textColor="#4a4a4a"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/robotomedium"
-                android:text="lorem ipsum jedz z ta lodziarnia"
-                android:textColor="#bebebe"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/highscore2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/robotomedium"
-                android:text="Highscore 0"
-                android:textColor="#4a4a4a"
-
-
-                android:textSize="14sp" />
-        </LinearLayout>
-
-    </LinearLayout>
 
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>

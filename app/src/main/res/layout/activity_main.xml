@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start"
+
     >
 
     <LinearLayout
@@ -39,6 +40,9 @@
         app:menu="@menu/drawer_menu"
         app:headerLayout="@layout/nav_header"
         app:itemTextAppearance="@style/Style_TextView"
+        android:background="@drawable/gradient"
+        app:theme="@style/yourStyle"
+
         />
 
 

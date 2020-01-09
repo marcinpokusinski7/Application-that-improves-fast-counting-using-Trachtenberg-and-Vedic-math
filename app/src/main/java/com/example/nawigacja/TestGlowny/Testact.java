@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.view.View;
 
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -74,7 +75,8 @@ public class Testact extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_glowny_trachtenberg);
 
-        final TextView score = (TextView)findViewById(R.id.text_view_score);
+
+        final TextView score = (TextView) findViewById(R.id.text_view_score);
         submitbutton=(Button)findViewById(R.id.button_confirm_next);
         tvtimer = findViewById(R.id.text_view_countdown);
         tv=(TextView) findViewById(R.id.text_view_question);
@@ -218,7 +220,7 @@ public class Testact extends AppCompatActivity{
 
 
         } else {
-            Intent intent = new Intent(getApplicationContext(), TestHighscore.class);
+            Intent intent = new Intent(getApplicationContext(), TestHighscoretrach.class);
             startActivity(intent);
             finishTest();
 

@@ -2,13 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="@drawable/gradient">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Glowna Fragment"
-        android:fontFamily="@font/robotobold"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+
+
 
     <TextView
 
@@ -18,11 +13,40 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:fontFamily="@font/robotobold"
+        android:textColor="#FFF"
+        android:textSize="13sp"
         android:text="Wersja 1.0.0
-Wykonał Marcin Pokusiński, 2019r."
+Wykonał Marcin Pokusiński, 2020r."
         />
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
 
+        android:src="@drawable/brandenbtor"></ImageView>
+    <TextView
+        android:id="@+id/witaj"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Witaj!"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/robotobold"
+        android:textColor="#FFF"></TextView>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/witaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplikacja stworzona, żeby przybliżyć i pomóc w nauce szybkiego liczenia dużych liczb w pamięci.\nProjekt powstał na potrzeby pracy inżynierskiej.\nW lewym górnym rogu znajduje się przycisk wysuwanego menu, w którym znajdują się wszystkie potrzebne informacje, testy, oraz ćwiczenia.\n Zapraszam do zabawy!"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:fontFamily="@font/robotobold"
+        android:textColor="#FFF"></TextView>
 
 
 </RelativeLayout>

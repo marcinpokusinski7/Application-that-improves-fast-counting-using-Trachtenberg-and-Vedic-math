@@ -49,12 +49,12 @@ public class WedyjskaFragment extends Fragment {
         btn12 = (CardView) v.findViewById(R.id.btn12);
 
 
-        btn6.setOnClickListener(new View.OnClickListener() {
+        btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WedyjskaFragmentBydeficiency wedyjskaFragmentBydeficiency = new WedyjskaFragmentBydeficiency();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container,wedyjskaFragmentBydeficiency);
 
                 transaction.commit();
@@ -66,19 +66,19 @@ public class WedyjskaFragment extends Fragment {
             public void onClick(View view) {
                 WedyjskaFragmentSub wedyjskaFragmentSub = new WedyjskaFragmentSub();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container,wedyjskaFragmentSub);
 
                 transaction.commit();
 
             }
         });
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WedyjskaFragmentVertCross wedyjskaFragmentVertCross = new WedyjskaFragmentVertCross();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, wedyjskaFragmentVertCross);
 
                 transaction.commit();
@@ -90,7 +90,7 @@ public class WedyjskaFragment extends Fragment {
             public void onClick(View view) {
                 WedyjskaFragmentPotegowanie wedyjskaFragmentPotegowanie = new WedyjskaFragmentPotegowanie();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, wedyjskaFragmentPotegowanie);
 
                 transaction.commit();
@@ -102,7 +102,7 @@ public class WedyjskaFragment extends Fragment {
             public void onClick(View view) {
                 WedyjskaFragmentPotegowaniePiatek wedyjskaFragmentPotegowaniePiatek = new WedyjskaFragmentPotegowaniePiatek();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, wedyjskaFragmentPotegowaniePiatek);
 
                 transaction.commit();

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name"></string>
-    <string name="zacznij">Aplikacja wspomagająca zapamiętywanie metod szybkiego liczenia w pamięci</string>
+    <string name="zacznij">Aplikacja wspomagająca naukę metod szybkiego liczenia w pamięci</string>
     <string name="todo">TODO</string>
     <string name="tutorial">WZTM</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

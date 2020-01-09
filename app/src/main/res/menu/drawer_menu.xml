@@ -17,29 +17,30 @@
 
         <item
             android:id="@+id/nav_trachtenberg"
-            android:icon="@drawable/ic_trachtenberg"
+            android:icon="@drawable/ic_trach"
             android:title="Trachtenberg"
             />
 
         <item
             android:id="@+id/nav_wedyjska"
-            android:icon="@drawable/ic_wedyjska"
+            android:icon="@drawable/ic_wed"
             android:title="Wedyjska" />
         <item
             android:id="@+id/nav_cwiczenia"
             android:icon="@drawable/ic_cwiczenia"
-            android:title="Cwiczenia" />
+            android:title="Test teoretyczny" />
         <item
             android:id="@+id/nav_test"
-            android:icon="@drawable/ic_test"
-            android:title="TEST" />
+            android:icon="@drawable/ic_knowledge"
+            android:title="Test praktyczny" />
     </group>
     <item android:title="Na początek">
         <menu>
             <item
                 android:id="@+id/nav_message"
-                android:icon="@drawable/ic_message"
-                android:title="Rozgrzewka" />
+                android:icon="@drawable/ic_test"
+                android:title="Rozgrzewka"
+                />
 
         </menu>
     </item>

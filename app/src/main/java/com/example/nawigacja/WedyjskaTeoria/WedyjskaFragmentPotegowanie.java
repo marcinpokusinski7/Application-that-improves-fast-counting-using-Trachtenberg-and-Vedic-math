@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -27,7 +28,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class WedyjskaFragmentPotegowanie extends Fragment {
-    private Button back;
+    private LinearLayout back;
     private EditText kolumna1;
     private EditText kolumna2;
     private EditText kolumna3;
@@ -40,7 +41,7 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
     private EditText kolumna10;
     private TextView losowaliczba;
     private EditText wynik;
-    private Button sprawdz;
+    private LinearLayout sprawdz;
     private ImageView refresh;
     private TextView potega;
 
@@ -62,9 +63,9 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_wedyjska_potegowanie2, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
-        sprawdz = (Button) v.findViewById(R.id.sprawdz);
+        sprawdz = (LinearLayout) v.findViewById(R.id.button_sprawdz);
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
-        back = (Button) v.findViewById(R.id.back);
+        back = (LinearLayout) v.findViewById(R.id.button_back);
         potega = (TextView) v.findViewById(R.id.potega);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
@@ -83,7 +84,7 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
         textColorDefaultRb = wynik.getTextColors();
-        arrowBtn.setOnClickListener(new View.OnClickListener() {
+        /*arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (expandableView.getVisibility()==View.GONE) {
@@ -98,7 +99,7 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
             }
 
 
-        });
+        });*/
 
 
 
@@ -166,6 +167,17 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
             }
         });
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WedyjskaFragmentPTwoTeory wedyjskaFragmentPTwoTeory = new WedyjskaFragmentPTwoTeory();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                transaction.replace(R.id.fragment_container, wedyjskaFragmentPTwoTeory);
+                cardView.setBackgroundResource(R.drawable.bg_item_cho);
+                transaction.commit();
+            }
+        });
 
 
 

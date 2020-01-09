@@ -60,7 +60,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment12 trachtenbergFragment12 = new TrachtenbergFragment12();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment12);
 
                 transaction.commit();
@@ -71,7 +71,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment11 trachtenbergFragment11 = new TrachtenbergFragment11();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment11);
 
                 transaction.commit();
@@ -82,7 +82,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment9 trachtenbergFragment9 = new TrachtenbergFragment9();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment9);
 
                 transaction.commit();
@@ -95,7 +95,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment8 trachtenbergFragment8 = new TrachtenbergFragment8();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment8);
 
                 transaction.commit();
@@ -106,7 +106,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment7 trachtenbergFragment7 = new TrachtenbergFragment7();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+              //  transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment7);
 
                 transaction.commit();
@@ -117,7 +117,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment6 trachtenbergFragment6 = new TrachtenbergFragment6();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment6);
 
                 transaction.commit();
@@ -128,7 +128,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment5 trachtenbergFragment5 = new TrachtenbergFragment5();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment5);
 
                 transaction.commit();
@@ -139,7 +139,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment4 trachtenbergFragment4 = new TrachtenbergFragment4();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment4);
 
                 transaction.commit();
@@ -153,7 +153,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment3 trachtenbergFragment3 = new TrachtenbergFragment3();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment3);
 
                 transaction.commit();
@@ -167,7 +167,7 @@ public class TrachtenbergFragment extends Fragment {
             public void onClick(View view) {
                 TrachtenbergFragment2 trachtenbergFragment2 = new TrachtenbergFragment2();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+               // transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
                 transaction.replace(R.id.fragment_container, trachtenbergFragment2);
 
                 transaction.commit();

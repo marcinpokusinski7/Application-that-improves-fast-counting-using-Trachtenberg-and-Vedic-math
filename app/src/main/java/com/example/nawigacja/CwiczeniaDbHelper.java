@@ -99,20 +99,42 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
     }
 
     private void WypelnijPytaniaZbior(){
-        Pytania p1 = new Pytania("Jaki jest wynik działania: " +random +"*" +2 , "A: "+random*2, "B: "+(random*2+random1), "C: "+(random*2+random2), "D: "+(random*2+random3), 1, Kategorie.TRACHTENBERG);
+        Pytania p1 = new Pytania("Jaką cyfrę dodajemy każdej liczbie z przodu, kiedy zaczynamy mnożenie?: ", "1", "0", "2", "3", 2, Kategorie.TRACHTENBERG);
         dodajPytanie(p1);
-        Pytania p2 = new Pytania("Wynik będzie wynosił", "A", "B", "C", "D", 2, Kategorie.WEDYJSKA);
+        Pytania p2 = new Pytania("Jaka liczba nie występuje w mnożeniu systemem Trachtenberga?", "10", "12", "2", "11", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p2);
-        Pytania p3 = new Pytania("Jaka będzie suma liczb?", "A", "B", "C", "D", 3, Kategorie.CIEKAWOSTKI);
+        Pytania p3 = new Pytania("Liczba sąsiednia to cyfra występująca: ", "Po prawej stronie cyfry", "Po lewej stronie cyfry", "Na końcu liczby", "Na początku liczby", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p3);
-        Pytania p4 = new Pytania("Jaki będzie wynik z tego działania", "A", "B", "C", "D", 4 , Kategorie.WEDYJSKA);
+        Pytania p4 = new Pytania("Jeżeli cyfra nie ma sąsiada to: ", "Przyjmujemy 1", "Przyjmujemy cyfrę na której działamy", "Mnożymy przez 2", "Przyjmujemy 0", 4 , Kategorie.TRACHTENBERG);
         dodajPytanie(p4);
-        Pytania p5 = new Pytania("Jaki jest wynik działania: " +random4 +"*" +2 , "A: "+(random*2+random2), "B: "+(random*2+random1), "C: "+random4*2, "D: "+(random*2+random3), 3, Kategorie.TRACHTENBERG);
+        Pytania p5 = new Pytania("W mnożeniu przez 11 liczbę sąsiednią: ", "Odejmujemy", "Mnożymy", "Dodajemy", "Dzielimy", 3, Kategorie.TRACHTENBERG);
         dodajPytanie(p5);
-        Pytania p6 = new Pytania("Jaki jest wynik działania 3", "A", "B", "C", "D", 1, Kategorie.CIEKAWOSTKI);
+        Pytania p6 = new Pytania("Zaczynając mnożenie liczby zapisujemy: ", "Łącznie z liczbą przez którą mnożymy", "Dwie ostatnie i dwie pierwsze", "Od pierwszej cyfry", "Od ostatniej cyfry", 4 , Kategorie.TRACHTENBERG);
         dodajPytanie(p6);
-
-
+        Pytania p7 = new Pytania("W mnożeniu przez 9: ", "Pierwszą od 10, kolejne od 9", "Wszystkie liczby odjemujemy od 10", "Pierwsza od 9, kolejne od 10", "Wszystkie liczby odejmujemy od 9", 1, Kategorie.TRACHTENBERG);
+        dodajPytanie(p7);
+        Pytania p8 = new Pytania("Jeżeli cyfra wyjściowa jest nieparzysta w niektorych równaniach dodajemy liczbę: ", "3", "4", "1", "5", 4 , Kategorie.TRACHTENBERG);
+        dodajPytanie(p8);
+        Pytania p9 = new Pytania("W mnożeniu przez 6: ", "Mnożymy przez 3", "Połowę sąsiedniej liczby", "Mnożymy przez 2", "Do każdej cyfry dodajemy sąsiednią liczbę", 1, Kategorie.TRACHTENBERG);
+        dodajPytanie(p9);
+        Pytania p10 = new Pytania("Jeżeli w wyniku otrzymamy liczbę wiekszą od 10 to: ", "Dodajemy całą do liczby poniżej", "Dodajemy resztę z 10", "Dodajemy samą 10", "Dzielimy na pół i dodajemy", 2, Kategorie.TRACHTENBERG);
+        dodajPytanie(p10);
+        Pytania p11 = new Pytania("Wynik każdej liczby odczytujemy od: ", "Góry", "Dołu", "Prawej", "Lewej", 2, Kategorie.TRACHTENBERG);
+        dodajPytanie(p11);
+        Pytania p12 = new Pytania("W mnożeniu przez 3 wynik po odjęciu od 10 i 9: ", "Mnożymy przez 3", "Mnożymy przez 4", "Mnożymy przez 2", "Dzielimy przez 2", 3, Kategorie.TRACHTENBERG);
+        dodajPytanie(p12);
+        Pytania p13 = new Pytania("W którym wieku sformułowane zostały reguły matematyki wedyjskiej? ", "XXI", "XX", "XIX", "XVIII", 2, Kategorie.WEDYJSKA);
+        dodajPytanie(p13);
+        Pytania p14 = new Pytania("Jaką nazwę nosi sutra stosowana przy odejmowania potęg liczby 10: ", "Wszystkie od 9, ostatnia od 10", "Wszystkie od 10, ostatnia od 9", "Wszystkie od 10", "Wszystkie od 9", 1 , Kategorie.WEDYJSKA);
+        dodajPytanie(p14);
+        Pytania p15 = new Pytania("Jak można przetłumaczyć duplex? ", "Potrojenie", "Podwojenie", "Podzielenie", "Złączenie", 2, Kategorie.WEDYJSKA);
+        dodajPytanie(p15);
+        Pytania p16 = new Pytania("W jaki sposób uzyskujemy wynik kwadratowy liczb które w podstawie mają 5 na końcu?", "Mnożymy przez siebie", "Rozdzielamy", "Dodajemy", "Zestawiamy", 4, Kategorie.WEDYJSKA);
+        dodajPytanie(p16);
+        Pytania p17 = new Pytania("W mnożeniu liczb bliskich 100 liczby odejmujemy od: ", "Siebie", "Liczby 101", "Sumy liczb", "Liczby 100", 4, Kategorie.WEDYJSKA);
+        dodajPytanie(p17);
+        Pytania p18 = new Pytania("Duplex z liczby 34 wynosi: ", "28", "7", "12", "24", 4, Kategorie.WEDYJSKA);
+        dodajPytanie(p18);
 
     }
     private void dodajPytanie(Pytania pytania) {
@@ -180,7 +202,7 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
                 selectionArgs,
                 null,
                 null,
-                null
+                "RANDOM() LIMIT 5 "
         );
         if (c.moveToFirst()){
             do {

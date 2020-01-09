@@ -1,5 +1,7 @@
 package com.example.nawigacja.TestGlowny;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -7,6 +9,7 @@ import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -27,7 +30,7 @@ import java.util.Random;
 public class Testall extends AppCompatActivity{
 
     int random2 = new Random().nextInt(10000);
-    int random3 = new Random().nextInt(10000);
+    int random3 = new Random().nextInt(80000);
     int random4 = new Random().nextInt(10000);
     int random5 = new Random().nextInt(10000);
     int random6 = new Random().nextInt(10000);
@@ -39,14 +42,20 @@ public class Testall extends AppCompatActivity{
     final int rand1 = new Random().nextInt(2) + 30;
     final int rand2 = new Random().nextInt(2) + 10;
     final int rand3= new Random().nextInt(2) + 50;
-
+    int deficiency = new Random().nextInt(99-80)+80;
+    int number = new Random().nextInt(99-2)+2;
+    int inv = new Random().nextInt(100-2)+2;
+    int cross = new Random().nextInt(60-2)+2;
+    int cross1 = new Random().nextInt(60-2)+2;
+    int deficiency1 = new Random().nextInt(99-80)+80;
+    int sub = 100000;
 
     private CountDownTimer Timer;
     private long timeLeftInMillis;
 
     private static final long COUNTDOWN_IN_MILLIS = 30000;
     TextView tv, tvquestion, tvtimer, tvscore, et_result;
-
+    long lastTimeRecorded;
     EditText et_text;
     private int questionnr =1 ;
     private long buttononback;
@@ -71,8 +80,9 @@ public class Testall extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_glowny_compare);
 
+        setContentView(R.layout.test_glowny_compare);
+        lastTimeRecorded = System.currentTimeMillis();
         final TextView score = (TextView)findViewById(R.id.text_view_score);
         submitbutton=(Button)findViewById(R.id.button_confirm_next);
         tvtimer = findViewById(R.id.text_view_countdown);
@@ -93,12 +103,25 @@ public class Testall extends AppCompatActivity{
 
 
         //load questions
-        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +random2 , ""+random2, 1));
-        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +random3 , ""+random3, 1));
-        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +random2 , ""+random2, 1));
-        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +random3 , ""+random3, 1));
+
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random2 +"*" +2 , ""+(random2*2), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random3 +"*" +3 , ""+(random3*3), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random4 +"*" +4 , ""+(random4*4), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random5 +"*" +5 , ""+(random5*5), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random6 +"*" +6 , ""+(random6*6), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random7 +"*" +7 , ""+(random7*7), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random8 +"*" +8 , ""+(random8*8), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random9 +"*" +9 , ""+(random9*9), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random11 +"*" +11 , ""+(random11*11), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik działania: " +random12 +"*" +12 , ""+(random12*12), 1));
 
 
+            //wed
+        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +inv +("\u00B2") , ""+(inv*inv),1));
+        queList.add(new QuestionClassCompare("Wybierz poprawny wynik potęgi kwadratowej: " +number +("\u00B2") , ""+(number*number), 1));
+        queList.add(new QuestionClassCompare("Jaki jest poprawny wynik różnicy liczb: " +sub +"-" +random3 , ""+(sub-random3), 1));
+        queList.add(new QuestionClassCompare("Wybierz poprawny wynik iloczynu liczb: " +deficiency +"*" +deficiency1 , ""+(deficiency*deficiency1), 1));
+        queList.add(new QuestionClassCompare("Jaki jest wynik iloczynu liczb: " +cross +"*" +cross1 , ""+(cross*cross1), 1));
 
 
 
@@ -184,6 +207,8 @@ public class Testall extends AppCompatActivity{
 
 
         } else {
+            Intent intent = new Intent(getApplicationContext(), TestHighscore.class);
+            startActivity(intent);
             finishTest();
 
         }
@@ -233,8 +258,17 @@ public class Testall extends AppCompatActivity{
             submitbutton.setText("Następne");
 
         } else {
-            submitbutton.setText("Zakończ");
             Timer.cancel();
+            submitbutton.setText("Zakończ");
+            long elapsedTime = System.currentTimeMillis() - lastTimeRecorded;
+            SharedPreferences preferences3 = getSharedPreferences("PREFSALL",0);
+            SharedPreferences.Editor editorall = preferences3.edit();
+            SharedPreferences preferences4 = getSharedPreferences("PREFSALL",0);
+            SharedPreferences.Editor editortimeall = preferences4.edit();
+            editorall.putInt("lastscoreall",score);
+            editortimeall.putLong("lasttimeall", elapsedTime);
+            editorall.apply();
+            editortimeall.apply();
 
         }
 

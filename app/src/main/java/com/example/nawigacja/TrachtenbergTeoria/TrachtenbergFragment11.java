@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -27,7 +28,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class TrachtenbergFragment11 extends Fragment {
-    private Button back;
+    private LinearLayout back;
     private EditText kolumna1;
     private EditText kolumna2;
     private EditText kolumna3;
@@ -42,7 +43,7 @@ public class TrachtenbergFragment11 extends Fragment {
     private ColorStateList textColorDefaultRb;
 
     private EditText wynik;
-    private Button sprawdz;
+    private LinearLayout sprawdz;
     int number = new Random().nextInt(10000);
     private ImageView refresh;
     CardView expandableView;
@@ -61,9 +62,10 @@ public class TrachtenbergFragment11 extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_trachtenberg_fragment11, container, false);
         wynik = (EditText) v.findViewById(R.id.wynik);
-        sprawdz = (Button) v.findViewById(R.id.sprawdz);
+        textColorDefaultRb = wynik.getTextColors();
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
-        back = (Button) v.findViewById(R.id.back);
+        sprawdz = (LinearLayout) v.findViewById(R.id.button_sprawdz);
+        back = (LinearLayout) v.findViewById(R.id.button_back);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
         kolumna3 = (EditText) v.findViewById(R.id.kolumna3);
@@ -81,22 +83,7 @@ public class TrachtenbergFragment11 extends Fragment {
         arrowBtn = (Button) v.findViewById(R.id.arrowBtn);
         cardView = (CardView) v.findViewById(R.id.cardView);
 
-        arrowBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (expandableView.getVisibility()==View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
-                    expandableView.setVisibility(View.VISIBLE);
-                    arrowBtn.setBackgroundResource(R.drawable.ic_arrrow_up);
-                }else{
-                    TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
-                    expandableView.setVisibility(View.GONE);
-                    arrowBtn.setBackgroundResource(R.drawable.ic_arrow_down);
-                }
-            }
 
-
-        });
 
         sprawdz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,6 +128,17 @@ public class TrachtenbergFragment11 extends Fragment {
 
                 transaction.commit();
 
+            }
+        });
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TrachtenbergFragmentTeory11 trachtenbergFragmentTeory11 = new TrachtenbergFragmentTeory11();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
+                transaction.replace(R.id.fragment_container, trachtenbergFragmentTeory11);
+                cardView.setBackgroundResource(R.drawable.bg_item_cho);
+                transaction.commit();
             }
         });
 

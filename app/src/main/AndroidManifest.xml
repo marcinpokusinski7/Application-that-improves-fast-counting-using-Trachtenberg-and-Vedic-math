@@ -3,25 +3,40 @@
     package="com.example.nawigacja">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TestActivity" />
-        <activity android:name=".TestGlowny.TestFragment" />
+        <activity android:name=".TestGlowny.TestFragment"
+            />
         <activity
             android:name=".TestGlowny.Testact"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
         <activity
             android:name=".TestGlowny.Testwed"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".TestGlowny.TestHighscore"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".TestGlowny.TestHighscore"
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
+        <activity android:name=".TestGlowny.TestHighscorewed"
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
+        <activity android:name=".TestGlowny.TestHighscoretrach"
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
+        <activity android:name=".TestGlowny.TestHighscorecheck"
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
         <activity
             android:name=".TestGlowny.Testall"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Design.NoActionBar" />

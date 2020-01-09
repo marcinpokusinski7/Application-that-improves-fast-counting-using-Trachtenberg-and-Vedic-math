@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    android:padding="16dp">
+    android:padding="20dp">
+
+
 
     <TextView
         android:id="@+id/text_view_score"
@@ -21,7 +23,7 @@
         android:layout_below="@+id/text_view_score"
         android:fontFamily="@font/robotobold"
         android:freezesText="true"
-        android:text="Pytanie: 1/x"
+        android:text="Pytanie: 1/10"
         android:textColor="#AAAAAA" />
 
     <TextView
@@ -41,7 +43,7 @@
         android:layout_below="@+id/text_view_question_count"
         android:fontFamily="@font/robotobold"
         android:freezesText="true"
-        android:text="Kategoria: "
+        android:text="Kategoria: Trachtenberg"
         android:textColor="#AAAAAA" />
 
     <TextView
@@ -61,6 +63,8 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+
         android:layout_centerVertical="true">
 
         <RadioButton
@@ -69,6 +73,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textSize="20sp"
+            android:padding="2dp"
+            android:textColor="#AAAAAA"
             android:text="Opcja 1" />
 
         <RadioButton
@@ -77,6 +84,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textColor="#AAAAAA"
+            android:textSize="20sp"
+            android:padding="2dp"
             android:text="Opcja 2" />
 
         <RadioButton
@@ -85,6 +95,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textColor="#AAAAAA"
+            android:padding="2dp"
+            android:textSize="20sp"
             android:text="Opcja 3" />
 
         <RadioButton
@@ -93,6 +106,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotomedium"
             android:freezesText="true"
+            android:textColor="#AAAAAA"
+            android:padding="2dp"
+            android:textSize="20sp"
             android:text="Opcja 4" />
     </RadioGroup>
 
@@ -101,12 +117,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radio_group"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="75dp"
         android:fontFamily="@font/robotomedium"
         android:freezesText="true"
         android:text="Potwierdż">
 
     </Button>
-
 </RelativeLayout>
-
