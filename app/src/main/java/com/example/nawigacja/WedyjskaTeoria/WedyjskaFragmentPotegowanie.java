@@ -134,7 +134,7 @@ public class WedyjskaFragmentPotegowanie extends Fragment {
                 kolumna2.getText().clear();
                 kolumna3.getText().clear();
                 kolumna4.getText().clear();
-                kolumna5.getText().clear();
+
                 kolumna6.getText().clear();
                 kolumna7.getText().clear();
                 kolumna8.getText().clear();

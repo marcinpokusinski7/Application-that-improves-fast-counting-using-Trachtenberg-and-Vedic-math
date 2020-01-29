@@ -45,7 +45,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/robotomedium"
-                            android:text="Trachtenberg ćwiczenia w mnożeniu przez 2."
+                            android:text="Trachtenberg ćwiczenia w mnożeniu przez 4."
                             android:textColor="#FFF"
                             android:textSize="24sp" />
 
@@ -152,7 +152,7 @@
                         android:layout_marginBottom="1dp"
                         android:fontFamily="@font/robotobold"
 
-                        android:text="*2"
+                        android:text="*4"
                         android:textColor="#FFF"
                         android:textSize="24dp" />
 

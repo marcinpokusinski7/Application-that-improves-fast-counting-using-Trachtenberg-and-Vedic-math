@@ -108,7 +108,7 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
 
         Random rand = new Random();
         number = rand.nextInt(1000/5)*5;
-        if (number%10 == 0|| number == 0 || number == 5){
+        if (number%10 == 0|| number == 0 || number == 5 || number == 10){
             number=number+5;
 
         }
@@ -138,7 +138,6 @@ public class WedyjskaFragmentPotegowaniePiatek extends Fragment {
                 kolumna7.getText().clear();
                 kolumna8.getText().clear();
                 kolumna9.getText().clear();
-                kolumna10.getText().clear();
 
                 if (number%10 == 0|| number == 0 || number == 5){
                     number=number+5;

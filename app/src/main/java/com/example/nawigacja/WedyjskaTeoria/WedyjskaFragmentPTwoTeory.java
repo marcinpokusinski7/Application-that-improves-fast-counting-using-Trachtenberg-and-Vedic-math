@@ -43,10 +43,11 @@ public class WedyjskaFragmentPTwoTeory extends Fragment {
     private ImageView refresh;
     private ColorStateList textColorDefaultRb;
     int number = new Random().nextInt(10000);
-    CardView expandableView,expandableView1;
+    CardView expandableView, expandableView1;
     Button arrowBtn, arrowBtn1;
     CardView cardView;
     CardView cardView1;
+
     public WedyjskaFragmentPTwoTeory() {
         // Required empty public constructor
     }
@@ -70,27 +71,27 @@ public class WedyjskaFragmentPTwoTeory extends Fragment {
         arrowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (expandableView.getVisibility()==View.GONE) {
+                if (expandableView.getVisibility() == View.GONE) {
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                     expandableView.setVisibility(View.VISIBLE);
                     arrowBtn.setBackgroundResource(R.drawable.ic_arrrow_up);
-                }else{
+                } else {
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                     expandableView.setVisibility(View.GONE);
                     arrowBtn.setBackgroundResource(R.drawable.ic_arrow_down);
                 }
-                }
+            }
 
 
         });
         arrowBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (expandableView1.getVisibility()==View.GONE) {
+                if (expandableView1.getVisibility() == View.GONE) {
                     TransitionManager.beginDelayedTransition(cardView1, new AutoTransition());
                     expandableView1.setVisibility(View.VISIBLE);
                     arrowBtn.setBackgroundResource(R.drawable.ic_arrrow_up);
-                }else{
+                } else {
                     TransitionManager.beginDelayedTransition(cardView1, new AutoTransition());
                     expandableView1.setVisibility(View.GONE);
                     arrowBtn1.setBackgroundResource(R.drawable.ic_arrow_down);
@@ -101,34 +102,17 @@ public class WedyjskaFragmentPTwoTeory extends Fragment {
         });
 
 
-
-
-
-
-
-
-
-
-
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WedyjskaFragmentPotegowanie wedyjskaFragmentPotegowanie = new WedyjskaFragmentPotegowanie();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 //transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right);
-                transaction.replace(R.id.fragment_container, wedyjskaFragmentPotegowanie );
+                transaction.replace(R.id.fragment_container, wedyjskaFragmentPotegowanie);
 
                 transaction.commit();
             }
         });
-
-
-
-
-
-
-
 
 
         return v;

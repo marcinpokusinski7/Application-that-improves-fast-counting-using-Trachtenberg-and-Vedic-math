@@ -5,14 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import com.example.nawigacja.CwiczeniaKontrakt.*;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class CwiczeniaDbHelper extends SQLiteOpenHelper {
     private static final String BAZADANYCH_NAZWA = "Cwiczenia.db";
@@ -23,9 +21,8 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
     final int random3 = new Random().nextInt(30);
     final int random4 = new Random().nextInt(10000);
     private static CwiczeniaDbHelper instance;
-        int wynik;
+    int wynik;
     private SQLiteDatabase db;   // odnosnik
-
 
 
     private CwiczeniaDbHelper(Context context) {
@@ -45,23 +42,23 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         this.db = db;
 
         final String SQL_STWORZ_KATEGORIE_TABLE = "CREATE TABLE " +
-                TablicaKategorii.NAZWA_TABELI + "( " +
+                TablicaKategorii.KATEGORIE_PYTAN + "( " +
                 TablicaKategorii._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TablicaKategorii.NAZWA_KOLUMNY + " TEXT " +
                 ")";
 
         final String SQL_STWORZ_BAZE_PYTAN = "CREATE TABLE " +
-                TablicaPytan.NAZWA_TABELI + " ( " +
+                TablicaPytan.PYTANIA_CWICZENIA + " ( " +
                 TablicaPytan._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TablicaPytan.POLE_PYTAN + " TEXT, " +
-                TablicaPytan.Pole_Opcja1 + " TEXT, " +
-                TablicaPytan.Pole_Opcja2 + " TEXT, " +
-                TablicaPytan.Pole_Opcja3 + " TEXT, " +
-                TablicaPytan.Pole_Opcja4 + " TEXT, " +
+                TablicaPytan.Opcja1 + " TEXT, " +
+                TablicaPytan.Opcja2 + " TEXT, " +
+                TablicaPytan.Opcja3 + " TEXT, " +
+                TablicaPytan.Opcja4 + " TEXT, " +
                 TablicaPytan.Pole_odpowiedzi_nr + " INTEGER, " +
                 TablicaPytan.Pole_Kategorii_ID + " INTEGER, " +
-                "FOREIGN KEY(" + TablicaPytan.Pole_Kategorii_ID +  ") REFERENCES " +
-                TablicaKategorii.NAZWA_TABELI + "(" + TablicaKategorii._ID + ")" + "ON DELETE CASCADE" +
+                "FOREIGN KEY(" + TablicaPytan.Pole_Kategorii_ID + ") REFERENCES " +
+                TablicaKategorii.KATEGORIE_PYTAN + "(" + TablicaKategorii._ID + ")" + "ON DELETE CASCADE" +
                 ")";
 
         db.execSQL(SQL_STWORZ_KATEGORIE_TABLE);
@@ -73,8 +70,8 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS " + TablicaKategorii.NAZWA_TABELI);
-        db.execSQL("DROP TABLE IF EXISTS " + TablicaPytan.NAZWA_TABELI);
+        db.execSQL("DROP TABLE IF EXISTS " + TablicaKategorii.KATEGORIE_PYTAN);
+        db.execSQL("DROP TABLE IF EXISTS " + TablicaPytan.PYTANIA_CWICZENIA);
         onCreate(db);
     }
 
@@ -84,7 +81,7 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         db.setForeignKeyConstraintsEnabled(true);
     }
 
-    private void WypelnijTablicaKategorii(){
+    private void WypelnijTablicaKategorii() {
         Kategorie c1 = new Kategorie("Trachtenberg");
         addKategoria(c1);
         Kategorie c2 = new Kategorie("Matematyka Wedyjska");
@@ -92,28 +89,29 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         Kategorie c3 = new Kategorie("Ciekawostki");
         addKategoria(c3);
     }
-    private void addKategoria(Kategorie kategorie){
+
+    private void addKategoria(Kategorie kategorie) {
         ContentValues cv = new ContentValues();
         cv.put(TablicaKategorii.NAZWA_KOLUMNY, kategorie.getNazwa());
-        db.insert(TablicaKategorii.NAZWA_TABELI, null, cv);
+        db.insert(TablicaKategorii.KATEGORIE_PYTAN, null, cv);
     }
 
-    private void WypelnijPytaniaZbior(){
+    private void WypelnijPytaniaZbior() {
         Pytania p1 = new Pytania("Jaką cyfrę dodajemy każdej liczbie z przodu, kiedy zaczynamy mnożenie?: ", "1", "0", "2", "3", 2, Kategorie.TRACHTENBERG);
         dodajPytanie(p1);
         Pytania p2 = new Pytania("Jaka liczba nie występuje w mnożeniu systemem Trachtenberga?", "10", "12", "2", "11", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p2);
         Pytania p3 = new Pytania("Liczba sąsiednia to cyfra występująca: ", "Po prawej stronie cyfry", "Po lewej stronie cyfry", "Na końcu liczby", "Na początku liczby", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p3);
-        Pytania p4 = new Pytania("Jeżeli cyfra nie ma sąsiada to: ", "Przyjmujemy 1", "Przyjmujemy cyfrę na której działamy", "Mnożymy przez 2", "Przyjmujemy 0", 4 , Kategorie.TRACHTENBERG);
+        Pytania p4 = new Pytania("Jeżeli cyfra nie ma sąsiada to: ", "Przyjmujemy 1", "Przyjmujemy cyfrę na której działamy", "Mnożymy przez 2", "Przyjmujemy 0", 4, Kategorie.TRACHTENBERG);
         dodajPytanie(p4);
         Pytania p5 = new Pytania("W mnożeniu przez 11 liczbę sąsiednią: ", "Odejmujemy", "Mnożymy", "Dodajemy", "Dzielimy", 3, Kategorie.TRACHTENBERG);
         dodajPytanie(p5);
-        Pytania p6 = new Pytania("Zaczynając mnożenie liczby zapisujemy: ", "Łącznie z liczbą przez którą mnożymy", "Dwie ostatnie i dwie pierwsze", "Od pierwszej cyfry", "Od ostatniej cyfry", 4 , Kategorie.TRACHTENBERG);
+        Pytania p6 = new Pytania("Zaczynając mnożenie liczby zapisujemy: ", "Łącznie z liczbą przez którą mnożymy", "Dwie ostatnie i dwie pierwsze", "Od pierwszej cyfry", "Od ostatniej cyfry", 4, Kategorie.TRACHTENBERG);
         dodajPytanie(p6);
         Pytania p7 = new Pytania("W mnożeniu przez 9: ", "Pierwszą od 10, kolejne od 9", "Wszystkie liczby odjemujemy od 10", "Pierwsza od 9, kolejne od 10", "Wszystkie liczby odejmujemy od 9", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p7);
-        Pytania p8 = new Pytania("Jeżeli cyfra wyjściowa jest nieparzysta w niektorych równaniach dodajemy liczbę: ", "3", "4", "1", "5", 4 , Kategorie.TRACHTENBERG);
+        Pytania p8 = new Pytania("Jeżeli cyfra wyjściowa jest nieparzysta w niektorych równaniach dodajemy liczbę: ", "3", "4", "1", "5", 4, Kategorie.TRACHTENBERG);
         dodajPytanie(p8);
         Pytania p9 = new Pytania("W mnożeniu przez 6: ", "Mnożymy przez 3", "Połowę sąsiedniej liczby", "Mnożymy przez 2", "Do każdej cyfry dodajemy sąsiednią liczbę", 1, Kategorie.TRACHTENBERG);
         dodajPytanie(p9);
@@ -125,7 +123,7 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         dodajPytanie(p12);
         Pytania p13 = new Pytania("W którym wieku sformułowane zostały reguły matematyki wedyjskiej? ", "XXI", "XX", "XIX", "XVIII", 2, Kategorie.WEDYJSKA);
         dodajPytanie(p13);
-        Pytania p14 = new Pytania("Jaką nazwę nosi sutra stosowana przy odejmowania potęg liczby 10: ", "Wszystkie od 9, ostatnia od 10", "Wszystkie od 10, ostatnia od 9", "Wszystkie od 10", "Wszystkie od 9", 1 , Kategorie.WEDYJSKA);
+        Pytania p14 = new Pytania("Jaką nazwę nosi sutra stosowana przy odejmowania potęg liczby 10: ", "Wszystkie od 9, ostatnia od 10", "Wszystkie od 10, ostatnia od 9", "Wszystkie od 10", "Wszystkie od 9", 1, Kategorie.WEDYJSKA);
         dodajPytanie(p14);
         Pytania p15 = new Pytania("Jak można przetłumaczyć duplex? ", "Potrojenie", "Podwojenie", "Podzielenie", "Złączenie", 2, Kategorie.WEDYJSKA);
         dodajPytanie(p15);
@@ -137,21 +135,23 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         dodajPytanie(p18);
 
     }
+
     private void dodajPytanie(Pytania pytania) {
         ContentValues cv = new ContentValues();
         cv.put(TablicaPytan.POLE_PYTAN, pytania.getPytania());
-        cv.put(TablicaPytan.Pole_Opcja1, pytania.getOpcja1());
-        cv.put(TablicaPytan.Pole_Opcja2, pytania.getOpcja2());
-        cv.put(TablicaPytan.Pole_Opcja3, pytania.getOpcja3());
-        cv.put(TablicaPytan.Pole_Opcja4, pytania.getOpcja4());
+        cv.put(TablicaPytan.Opcja1, pytania.getOpcja1());
+        cv.put(TablicaPytan.Opcja2, pytania.getOpcja2());
+        cv.put(TablicaPytan.Opcja3, pytania.getOpcja3());
+        cv.put(TablicaPytan.Opcja4, pytania.getOpcja4());
         cv.put(TablicaPytan.Pole_odpowiedzi_nr, pytania.getOdpowiedznr());
         cv.put(TablicaPytan.Pole_Kategorii_ID, pytania.getKategorieID());
-        db.insert(TablicaPytan.NAZWA_TABELI, null, cv);
+        db.insert(TablicaPytan.PYTANIA_CWICZENIA, null, cv);
     }
+
     public List<Kategorie> getAllKategorie() {
         List<Kategorie> kategorieList = new ArrayList<>();
         db = getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM " + TablicaKategorii.NAZWA_TABELI, null);
+        Cursor c = db.rawQuery("SELECT * FROM " + TablicaKategorii.KATEGORIE_PYTAN, null);
 
         if (c.moveToFirst()) {
             do {
@@ -159,35 +159,36 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
                 kategorie.setId((c.getInt(c.getColumnIndex(TablicaKategorii._ID))));
                 kategorie.setNazwa(c.getString(c.getColumnIndex(TablicaKategorii.NAZWA_KOLUMNY)));
                 kategorieList.add(kategorie);
-            }while (c.moveToNext());
+            } while (c.moveToNext());
         }
         c.close();
         return kategorieList;
     }
 
 
-    public ArrayList<Pytania> getAllPytania(){
+    public ArrayList<Pytania> getAllPytania() {
         ArrayList<Pytania> PytaniaList = new ArrayList<>();
         db = getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM " + TablicaPytan.NAZWA_TABELI, null);
+        Cursor c = db.rawQuery("SELECT * FROM " + TablicaPytan.PYTANIA_CWICZENIA, null);
 
         if (c.moveToFirst()) {
-            do{
+            do {
                 Pytania pytania = new Pytania();
                 pytania.setId(c.getInt(c.getColumnIndex(TablicaPytan._ID)));
                 pytania.setPytania(c.getString(c.getColumnIndex(TablicaPytan.POLE_PYTAN)));
-                pytania.setOpcja1(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja1)));
-                pytania.setOpcja2(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja2)));
-                pytania.setOpcja3(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja3)));
-                pytania.setOpcja4(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja4)));
+                pytania.setOpcja1(c.getString(c.getColumnIndex(TablicaPytan.Opcja1)));
+                pytania.setOpcja2(c.getString(c.getColumnIndex(TablicaPytan.Opcja2)));
+                pytania.setOpcja3(c.getString(c.getColumnIndex(TablicaPytan.Opcja3)));
+                pytania.setOpcja4(c.getString(c.getColumnIndex(TablicaPytan.Opcja4)));
                 pytania.setOdpowiedznr(c.getInt(c.getColumnIndex(TablicaPytan.Pole_odpowiedzi_nr)));
                 pytania.setKategorieID(c.getInt(c.getColumnIndex(TablicaPytan.Pole_Kategorii_ID)));
                 PytaniaList.add(pytania);
-            }while (c.moveToNext());
+            } while (c.moveToNext());
         }
         c.close();
         return PytaniaList;
     }
+
     public ArrayList<Pytania> getPytania(int kategorieID) {
         ArrayList<Pytania> pytaniaList = new ArrayList<>();
         db = getReadableDatabase();
@@ -196,7 +197,7 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
         String[] selectionArgs = new String[]{String.valueOf(kategorieID)};
 
         Cursor c = db.query(
-                TablicaPytan.NAZWA_TABELI,
+                TablicaPytan.PYTANIA_CWICZENIA,
                 null,
                 selection,
                 selectionArgs,
@@ -204,31 +205,25 @@ public class CwiczeniaDbHelper extends SQLiteOpenHelper {
                 null,
                 "RANDOM() LIMIT 5 "
         );
-        if (c.moveToFirst()){
+        if (c.moveToFirst()) {
             do {
                 Pytania pytania = new Pytania();
                 pytania.setId(c.getInt(c.getColumnIndex(TablicaPytan._ID)));
                 pytania.setPytania(c.getString(c.getColumnIndex(TablicaPytan.POLE_PYTAN)));
-                pytania.setOpcja1(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja1)));
-                pytania.setOpcja2(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja2)));
-                pytania.setOpcja3(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja3)));
-                pytania.setOpcja4(c.getString(c.getColumnIndex(TablicaPytan.Pole_Opcja4)));
+                pytania.setOpcja1(c.getString(c.getColumnIndex(TablicaPytan.Opcja1)));
+                pytania.setOpcja2(c.getString(c.getColumnIndex(TablicaPytan.Opcja2)));
+                pytania.setOpcja3(c.getString(c.getColumnIndex(TablicaPytan.Opcja3)));
+                pytania.setOpcja4(c.getString(c.getColumnIndex(TablicaPytan.Opcja4)));
                 pytania.setOdpowiedznr(c.getInt(c.getColumnIndex(TablicaPytan.Pole_odpowiedzi_nr)));
                 pytania.setKategorieID(c.getInt(c.getColumnIndex(TablicaPytan.Pole_Kategorii_ID)));
                 pytaniaList.add(pytania);
-            }while(c.moveToNext());
+            } while (c.moveToNext());
         }
         c.close();
         return pytaniaList;
 
 
-
-
-
-
     }
-
-
 
 
 }

@@ -39,7 +39,7 @@ public class WedyjskaFragmentVertCross extends Fragment {
     private EditText kolumna7;
     private EditText kolumna8;
     private EditText kolumna9;
-    private EditText kolumna10;
+    private EditText kolumna10, kolumna11, kolumna12;
     private TextView losowaliczba;
     private EditText wynik;
     private LinearLayout sprawdz;
@@ -78,6 +78,9 @@ public class WedyjskaFragmentVertCross extends Fragment {
         kolumna8 = (EditText) v.findViewById(R.id.kolumna8);
         kolumna9 = (EditText) v.findViewById(R.id.kolumna9);
         kolumna10 = (EditText) v.findViewById(R.id.kolumna10);
+        kolumna11 = (EditText) v.findViewById(R.id.kolumna11);
+        kolumna12 = (EditText) v.findViewById(R.id.kolumna12);
+
         refresh = (ImageView) v.findViewById(R.id.refresh);
         //losowaliczba.setText(generowanieString(6));
         losowaliczba.setText(Integer.toString(number));
@@ -136,13 +139,14 @@ public class WedyjskaFragmentVertCross extends Fragment {
                 kolumna1.getText().clear();
                 kolumna2.getText().clear();
                 kolumna3.getText().clear();
-                kolumna4.getText().clear();
-                kolumna5.getText().clear();
+
                 kolumna6.getText().clear();
                 kolumna7.getText().clear();
                 kolumna8.getText().clear();
                 kolumna9.getText().clear();
                 kolumna10.getText().clear();
+                kolumna11.getText().clear();
+                kolumna12.getText().clear();
                 wynik.setTextColor(textColorDefaultRb);
                 Random rand = new Random();
                 number = rand.nextInt(100);

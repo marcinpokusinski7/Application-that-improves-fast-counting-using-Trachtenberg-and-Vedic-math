@@ -100,8 +100,8 @@ public class CwiczeniaFragment extends Fragment {
         int kategorieID = wybraneKategorie.getId();
 
         Intent intent = new Intent(getContext(), TestActivity.class);
-        intent.putExtra(EXTRA_KATEGORIA_ID, kategorieID = 3);
-        intent.putExtra(EXTRA_KATEGORIA_NAZWA, nazwaKategorii);
+        intent.putExtra(EXTRA_KATEGORIA_ID, kategorieID = 2);
+        intent.putExtra(EXTRA_KATEGORIA_NAZWA, "Wedyjska");
 
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }

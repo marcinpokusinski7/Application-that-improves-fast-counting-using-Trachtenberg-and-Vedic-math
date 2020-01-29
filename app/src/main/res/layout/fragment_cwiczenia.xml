@@ -42,7 +42,7 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/robotomedium"
         android:gravity="center"
-        android:text="W tej zakładce znajdują sie pytania teoretyczne z zagadnień poruszanych w aplikacji. Do wyboru są pytania teoretyczne z Matematyki wedyjskiej i system Trachtenberga. "
+        android:text="W tej zakładce znajdują sie pytania teoretyczne z zagadnień poruszanych w aplikacji. Do wyboru są pytania teoretyczne z Matematyki wedyjskiej i systemu Trachtenberga. "
         android:textColor="#FFF"
         android:textSize="18sp" />
 

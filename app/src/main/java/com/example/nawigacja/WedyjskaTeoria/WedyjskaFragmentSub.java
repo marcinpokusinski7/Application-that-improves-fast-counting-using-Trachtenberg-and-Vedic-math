@@ -179,26 +179,24 @@ public class WedyjskaFragmentSub extends Fragment {
 
                 if ( rande == 0 ){
                     rande++;
-                    kolumna1.getText().clear();
-                    kolumna2.getText().clear();
-                    kolumna3.getText().clear();
-                    kolumna4.getText().clear();
-                    kolumna5.getText().clear();
-                    kolumna6.getText().clear();
-                    kolumna7.getText().clear();
-                    kolumna8.getText().clear();
-                    kolumna9.getText().clear();
-                    kolumna10.getText().clear();
-                    kolumna11.getText().clear();
-                    kolumna12.getText().clear();
-                    kolumna13.getText().clear();
-                    kolumna14.getText().clear();
-                    kolumna15.getText().clear();
-                    wynik.getText().clear();
-                    wynik.setTextColor(textColorDefaultRb);
-
                 }
-
+                kolumna1.getText().clear();
+                kolumna2.getText().clear();
+                kolumna3.getText().clear();
+                kolumna4.getText().clear();
+                kolumna5.getText().clear();
+                kolumna6.getText().clear();
+                kolumna7.getText().clear();
+                kolumna8.getText().clear();
+                kolumna9.getText().clear();
+                kolumna10.getText().clear();
+                kolumna11.getText().clear();
+                kolumna12.getText().clear();
+                kolumna13.getText().clear();
+                kolumna14.getText().clear();
+                kolumna15.getText().clear();
+                wynik.getText().clear();
+                wynik.setTextColor(textColorDefaultRb);
                 String myStringg = String.valueOf(rande);
                 potega.setText(myStringg);
                 String myString = String.valueOf(number);

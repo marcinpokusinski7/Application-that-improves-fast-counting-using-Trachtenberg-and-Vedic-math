@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="Test"
@@ -24,7 +24,7 @@
 
         android:layout_marginBottom="30dp"
         android:gravity="center"
-        android:text="Miejsce w którym sprawdzisz swoje umiejętności i będziesz rozwiązywał zadania porównując czas z każdym następnym rozwiązaniem"
+        android:text="Miejsce w którym możesz sprawdzić swoją wiedzę z szybkiego liczenia w pamięci walcząc o czas i punkty, oraz porównując najlepsze podejścia."
         android:textColor="#FFF"
         android:textSize="16sp"
         android:textStyle="bold"/>
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomedium"
-                android:text="Test z iloczyńow Trachtenberga"
+                android:text="Test z mnożenia systemem Trachtenberga"
                 android:textColor="#999999"
                 android:textSize="14sp" />
 
@@ -123,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test losowy z matematyki wedyjskiej."
+                android:text="Test losowy z matematyki wedyjskiej"
                 android:textColor="#999999"
                 android:fontFamily="@font/robotomedium"
                 android:textSize="14sp" />
@@ -180,7 +180,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test losowy z matematyki wedyjskiej i Trachtenberga."
+                android:text="Test losowy z matematyki wedyjskiej i Trachtenberga"
                 android:textColor="#999999"
                 android:fontFamily="@font/robotomedium"
                 android:textSize="14sp" />

@@ -108,7 +108,7 @@ public class Testwed extends AppCompatActivity{
                 ""+number*number, ""+(number*number+rand3), 3));
         queList.add(new QuestionClass("Jaki jest poprawny wynik różnicy liczb: " +sub +"-" +random3 , ""+(sub-random3+rand2), ""+(sub-random3+rand3),
                 ""+(sub-random3), ""+(sub-random3+rand1), 3));
-        queList.add(new QuestionClass("Wybierz poprawny wynik iloczynu liczb: " +(deficiency*deficiency1) , ""+(deficiency*deficiency1+rand3), ""+(deficiency*deficiency1+rand2),
+        queList.add(new QuestionClass("Wybierz poprawny wynik iloczynu liczb: " +(deficiency +"*" +deficiency1) , ""+(deficiency*deficiency1+rand3), ""+(deficiency*deficiency1+rand2),
                 ""+deficiency*deficiency1, ""+(deficiency*deficiency1+rand1), 3));
         queList.add(new QuestionClass("Jaki jest wynik iloczynu liczb: " +random4 +"*" +random5 , ""+(random4*random5+rand1), ""+(random4*random5+rand2),
                 ""+random4*random5, ""+(random4*random5+rand3), 3));

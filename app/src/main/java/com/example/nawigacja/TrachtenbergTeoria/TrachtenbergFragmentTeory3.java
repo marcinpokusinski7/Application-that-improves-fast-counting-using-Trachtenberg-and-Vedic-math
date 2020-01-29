@@ -78,8 +78,8 @@ public class TrachtenbergFragmentTeory3 extends Fragment {
                     TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
                     expandableView.setVisibility(View.GONE);
                     arrowBtn.setBackgroundResource(R.drawable.ic_arrow_down);
-                }
-                }
+                }}
+
 
 
         });

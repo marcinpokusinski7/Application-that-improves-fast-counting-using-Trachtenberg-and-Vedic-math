@@ -114,9 +114,10 @@
                 android:layout_marginTop="76dp"
                 android:layout_marginBottom="13dp"
                 android:fontFamily="@font/robotobold"
-                android:text="1. Rozważmy liczbę 3543. Zgodnie z zasadami liczbę zapisujemy z uwzględnieniem 0 jako 03543.\n2. Poszczególne cyfry liczby zapisujemy w kolumnie pionowo, z uwzględnieniem liczby 0. Zaczynamy zapis od ostatniej liczby.\n3. Pierwszą cyfre z kolumny odejmujemy od liczby 10.\n4. Pozostałe liczby odejmujemy od liczby 9, dodajemy cyfrę sąsiednią.\n5. Jeżeli po którymś działaniu liczba będzie większa od 10 zapisujemy ją jako resztę np.(reszta z 14 to 4, czyli 1 | 4) następnie 1 przesuwamy niżej."
+                android:text="Rozważmy liczbę 3543. Zgodnie z zasadami liczbę zapisujemy z uwzględnieniem 0 jako 03543.\nPoszczególne cyfry zapisujemy w kolumnie pionowo z uwzględnieniem liczby 0. Zaczynamy zapis od ostatniej liczby.\nPierwszą cyfre z kolumny odejmujemy od liczby 10.\nPozostałe liczby odejmujemy od liczby 9, dodajemy cyfrę sąsiednią.\nJeżeli po którymś działaniu liczba będzie większa od 10 zapisujemy ją jako resztę np.(reszta z 14 to 4, czyli 1 | 4) następnie 1 przesuwamy niżej."
                 android:textColor="#FFF"
                 android:textSize="18sp"
+
                 app:layout_constraintBottom_toTopOf="@+id/cardView1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"

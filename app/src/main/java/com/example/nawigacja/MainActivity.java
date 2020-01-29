@@ -39,17 +39,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-    //Pozwala nam od razu otworzyc okno glowne na fragmencie nav_glowna
-       if (savedInstanceState == null) { //pozwala odwrocic urzadzenie bez uzycia ondestroy przez oncreate + otwiera ja w tym samym miejscu po zamknieciu
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new GlownaFragment()).commit();
-        navigationView.setCheckedItem(R.id.nav_glowna);}
+        //Pozwala nam od razu otworzyc okno glowne na fragmencie nav_glowna
+        if (savedInstanceState == null) { //pozwala odwrocic urzadzenie bez uzycia ondestroy przez oncreate + otwiera ja w tym samym miejscu po zamknieciu
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new GlownaFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_glowna);
+        }
     }
-//Wywolanie fragmentow i otworzenie ich w ui
+
+    //Wywolanie fragmentow i otworzenie ich w ui
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        switch(menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.nav_glowna:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new GlownaFragment()).commit();
@@ -81,9 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-
-
-//powrot do drawera
+    //powrot do drawera
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {

@@ -10,7 +10,7 @@ public class Kategorie {
     private int id;
     private String nazwa;
 
-    public Kategorie(){
+    public Kategorie() {
 
     }
 

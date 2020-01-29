@@ -4,8 +4,6 @@ package com.example.nawigacja.TrachtenbergTeoria;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.transition.AutoTransition;
-import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +40,7 @@ public class TrachtenbergFragment9 extends Fragment {
     private EditText kolumna10;
     private TextView losowaliczba;
     private EditText wynik;
-    private LinearLayout sprawdz;
+    private LinearLayout check;
     int number = new Random().nextInt(10000);
     private ImageView refresh;
     CardView expandableView;
@@ -63,7 +61,7 @@ public class TrachtenbergFragment9 extends Fragment {
         wynik = (EditText) v.findViewById(R.id.wynik);
         textColorDefaultRb = wynik.getTextColors();
         losowaliczba = (TextView) v.findViewById(R.id.losowaliczba);
-        sprawdz = (LinearLayout) v.findViewById(R.id.button_sprawdz);
+        check = (LinearLayout) v.findViewById(R.id.button_sprawdz);
         back = (LinearLayout) v.findViewById(R.id.button_back);
         kolumna1 = (EditText) v.findViewById(R.id.kolumna1);
         kolumna2 = (EditText) v.findViewById(R.id.kolumna2);
@@ -84,7 +82,7 @@ public class TrachtenbergFragment9 extends Fragment {
 
 
 
-        sprawdz.setOnClickListener(new View.OnClickListener() {
+        check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(wynik.getText().toString().equals( wynik.getText().toString())){
