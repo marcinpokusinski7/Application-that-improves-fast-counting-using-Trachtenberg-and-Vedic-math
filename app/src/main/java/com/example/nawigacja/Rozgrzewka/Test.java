@@ -32,7 +32,7 @@ public class Test {
             numberCorrect++;
             isCorrect=true;
         }
-        score = numberCorrect + 1;
+        score = score + 1;
         return isCorrect;
     }
 
