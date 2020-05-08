@@ -16,9 +16,9 @@ Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dw
 
 ![menu](./images/menu.png)
 ![rozgrzewka](./images/rozw.png)
-![rozgrzewka](./images/rozgrzewka.png)
+![rozgrzewkat](./images/rozgrzewka.png)
 ![trach](./images/trach.png)
-![trach](./images/trachcw.png)
+![tracht](./images/trachcw.png)
 ![wedmen](./images/wedmen.png)
 ![tachteo](./images/tachteo.png)
 ![testyp](./images/testyp.png)
