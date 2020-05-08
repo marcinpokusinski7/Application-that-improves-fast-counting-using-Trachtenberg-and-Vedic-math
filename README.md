@@ -15,6 +15,7 @@ Projekt został wykonany przy użyciu:
 Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dwie ścieżki nauczania, które bazują na podstawie wyżej wymienionych metod. Dodatkowo do aplikacji została dodana rozgrzewka polegająca na jak najszybszym dodawaniu liczb i wybraniu poprawnego wyniku z czterech losowych liczb i jednego poprawnego wyniku. Do każdego tematu z działów zostały zrobione testy sprawdzające umiejętności. Testy składają się z testów praktycznych, które losowo generują liczby i posiadają losowe odpowiedzi w tym jedną poprawną. Trudniejszy test, który posiada samo pytanie i sprawdza ciąg wprowadzonych znaków przez użytkownika, następnie porównuje z danym działaniem i przedstawia wynik. Testy teoretyczne które zawierają pytania,  przetrzymywane w bazie danych Sqlite. Po wykonanych zadaniach użytkownik może sprawdzić tablice wyników na której zapisują się trzy najlepsze wyniki z wszystkich gier. Wyniki są przetrzymywane w SharedPreferences. Dodatkowo do każdego działu użytkownik ma do wybrania kilka metod jakich może się nauczyć. Dla Trachtenberga będzie to 10 metod, a dla matematyki wedyjskiej 5. W dziale nauki znajduje się teoria, oraz zadania które generują losowe liczby, sprawdzają poprawność wyniku, lub zmieniają liczbę. Ostatnią zakładką jaką znajdziemy jest teoria do zadań, zawarta w formie opisu, lub rozwijanych przykładach.
 
 ![menu](./images/menu.png)
+![menu](./images/powitalny.png)
 ![rozw](./images/rozw.png)
 ![trach](./images/trach.png)
 ![tracht](./images/trachcw.png)
