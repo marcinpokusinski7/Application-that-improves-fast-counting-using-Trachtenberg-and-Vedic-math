@@ -22,7 +22,6 @@ Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dw
 ![testyp](./images/testyp.png)
 ![testp1](./images/testp1.png)
 ![high](./images/high.png)
-![glowna](./images/powitalny.png)
 ![pyt](./images/pytteo.png)
 ![rozgrzewka](./images/rozgrzewka.png)
 
