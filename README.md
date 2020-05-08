@@ -22,7 +22,6 @@ Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dw
 ![trach](./images/trachcw.png)
 ![wedmen](./images/wedmen.png)
 ![tachteo](./images/tachteo.png)
-![rozw](./images/rozw.png)
 ![testyp](./images/testyp.png)
 ![testp1](./images/testp1.png)
 ![high](./images/high.png)
