@@ -16,7 +16,6 @@ Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dw
 
 ![menu](./images/menu.png)
 ![rozgrzewka](./images/rozw.png)
-![rozgrzewkat](./images/rozgrzewka.png)
 ![trach](./images/trach.png)
 ![tracht](./images/trachcw.png)
 ![wedmen](./images/wedmen.png)
@@ -26,5 +25,6 @@ Aplikacja została wykonana jako projekt inżynierski. W aplikacji znajdziemy dw
 ![high](./images/high.png)
 ![glowna](./images/powitalny.png)
 ![pyt](./images/pytteo.png)
+![rozgrzewkat](./images/rozgrzewka.png)
 
 
